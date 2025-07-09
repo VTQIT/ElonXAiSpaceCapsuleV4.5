@@ -46293,3 +46293,16 @@ a.u-link.u-text-hover-color-var:hover {
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
+ 
+ /* Add this to your nicepage.css file */
+.u-social-icons .u-icon,
+.u-social-icons img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); /* For Safari browser compatibility */
+}
+
+/* If your icons are implemented as background images, you might need this */
+.u-social-icons .u-social-url {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); /* For Safari browser compatibility */
+}
