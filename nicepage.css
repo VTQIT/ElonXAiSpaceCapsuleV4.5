@@ -46111,63 +46111,34 @@ a.u-link.u-text-hover-color-var:hover {
 .u-header .u-image-1 {
   width: 485px;
   height: 50px;
-  margin: -41px 281px 34px auto;
+  margin: -27px auto 20px -92px;
 }
 @media (max-width: 1199px) {
   .u-header .u-image-1 {
-    margin-right: 281px;
+    margin-left: -92px;
   }
 }
-@media (max-width: 991px) {
-  .u-header .u-image-1 {
-    margin-right: 235px;
-  }
-}
-@media (max-width: 767px) {
-  .u-header .u-image-1 {
-    margin-right: 55px;
-  }
-}
+
+
 @media (max-width: 575px) {
   .u-header .u-sheet-1 {
-    min-height: 55px;
+    min-height: 74px;
+  }
+
+  .u-header .u-menu-1 {
+    margin-top: 21px;
   }
 
   .u-header .u-image-1 {
-    height: 35px;
-    margin-top: -42px;
-    margin-bottom: 10px;
-    margin-right: initial;
-    margin-left: initial;
-    width: auto;
+    height: 25px;
+    width: 297px;
+    margin-top: -25px;
+    margin-bottom: 21px;
+    margin-left: -99px;
   }
 }
 .u-footer .u-sheet-1 {
   min-height: 578px;
-}
-
-.u-footer .u-image-1 {
-  height: 397px;
-  margin-top: 0;
-  margin-bottom: 0;
-  filter: brightness(0);
-}
-
-.u-footer .u-image-2 {
-  width: 1204px;
-  height: 90px;
-  margin: -133px -32px 0;
-}
-
-.u-footer .u-text-1 {
-  width: 530px;
-  margin: 14px auto 0;
-}
-
-.u-footer .u-line-1 {
-  transform-origin: left center;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .u-footer .u-social-icons-1 {
@@ -46175,134 +46146,81 @@ a.u-link.u-text-hover-color-var:hover {
   width: 419px;
   min-width: 94px;
   white-space: nowrap;
-  margin: -346px auto 60px 345px;
-}
-
-.u-footer .u-icon-1 {
-  color: rgb(59, 89, 152) !important;
+  margin: 57px auto 0;
 }
 
 .u-footer .u-icon-2 {
-  color: rgb(197, 54, 164) !important;
+  height: 100%;
 }
 
 .u-footer .u-icon-3 {
-  color: rgb(0, 122, 185) !important;
+  height: 0;
 }
 
-.u-footer .u-icon-4 {
-  height: 100%;
-  color: rgb(219, 83, 75) !important;
+.u-footer .u-text-1 {
+  font-size: 1.125rem;
+  margin: 51px 316px 0 294px;
+}
+
+.u-footer .u-line-1 {
+  transform-origin: left center;
+  margin: 20px 0 60px;
 }
 @media (max-width: 1199px) {
-  .u-footer .u-sheet-1 {
-    min-height: 558px;
-  }
-
-  .u-footer .u-image-1 {
-    inset: auto;
-  }
-
-  .u-footer .u-image-2 {
-    width: 940px;
-    height: 70px;
-    margin-top: -133px;
-    margin-left: 0;
-    margin-right: 0;
+  .u-footer .u-social-icons-1 {
+    margin-top: 58px;
   }
 
   .u-footer .u-text-1 {
-    font-size: 1.125rem;
+    margin-top: 50px;
+    margin-right: 216px;
+    margin-left: 194px;
   }
 
-  .u-footer .u-social-icons-1 {
-    margin-top: -346px;
-    margin-left: 345px;
+  .u-footer .u-line-1 {
+    margin-right: initial;
+    margin-left: initial;
   }
 }
 @media (max-width: 991px) {
-  .u-footer .u-sheet-1 {
-    min-height: 542px;
-  }
-
-  .u-footer .u-image-2 {
-    width: 720px;
-    height: 54px;
-  }
-
-  .u-footer .u-social-icons-1 {
-    margin-left: 301px;
+  .u-footer .u-text-1 {
+    margin-right: 106px;
+    margin-left: 84px;
   }
 }
 @media (max-width: 767px) {
-  .u-footer .u-sheet-1 {
-    min-height: 529px;
-  }
-
-  .u-footer .u-image-2 {
-    width: 540px;
-    height: 41px;
+  .u-footer .u-social-icons-1 {
+    margin-top: -70px;
   }
 
   .u-footer .u-text-1 {
     font-size: 1rem;
-  }
-
-  .u-footer .u-social-icons-1 {
-    margin-left: 121px;
+    margin-top: 53px;
+    margin-right: 10px;
+    margin-left: 0;
   }
 }
 @media (max-width: 575px) {
-  .u-footer .u-sheet-1 {
-    min-height: 250px;
-  }
-
-  .u-footer .u-image-1 {
-    height: 326px;
-  }
-
-  .u-footer .u-image-2 {
-    height: 26px;
-    margin-top: -172px;
-    margin-right: initial;
-    margin-left: initial;
-    width: auto;
+  .u-footer .u-social-icons-1 {
+    height: 40px;
+    width: 206px;
+    margin-top: 20px;
   }
 
   .u-footer .u-text-1 {
-    width: auto;
     font-size: 0.75rem;
-    margin-top: 34px;
-    margin-left: 0;
+    width: auto;
+    margin-top: 11px;
     margin-right: 0;
   }
 
   .u-footer .u-line-1 {
-    margin-top: 92px;
-  }
-
-  .u-footer .u-social-icons-1 {
-    height: 37px;
-    width: 223px;
-    margin-top: -265px;
-    margin-left: auto;
-    margin-bottom: 0;
+    margin-top: 9px;
+    margin-right: initial;
+    margin-left: initial;
   }
 }
 
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
- 
- /* Add this to your nicepage.css file */
-.u-social-icons .u-icon,
-.u-social-icons img {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%); /* For Safari browser compatibility */
-}
-
-/* If your icons are implemented as background images, you might need this */
-.u-social-icons .u-social-url {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%); /* For Safari browser compatibility */
-}
