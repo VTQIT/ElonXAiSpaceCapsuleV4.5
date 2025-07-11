@@ -1,0 +1,336 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    /* Removed the body background color as the video will be the main background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section - Made transparent dark gray */
+header {
+    position: relative; /* Ensure header is above the video */
+    background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray for header */
+    color: white;
+    box-shadow: none; /* Remove existing shadow as it might clash */
+    z-index: 10; /* Give a higher z-index to ensure it's always on top */
+}
+
+header nav a {
+    color: white !important; /* Ensure nav links are white */
+}
+
+/* Mobile Menu - also made transparent dark gray */
+#mobile-menu {
+    background-color: rgba(30, 30, 30, 0.9) !important; /* Slightly more opaque for mobile menu */
+}
+
+#mobile-menu a {
+    color: white !important; /* Ensure mobile menu links are white */
+}
+
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+    /* Apply transparent dark gray background to all sections below the hero */
+    position: relative; /* Essential for z-index to work against the fixed video */
+    background-color: rgba(30, 30, 30, 0.8); /* Dark gray with 80% opacity */
+    color: white; /* Adjust text color for readability against dark background */
+    margin-top: 1rem; /* Add some margin between sections if desired */
+    z-index: 1; /* Ensure these sections are above the video */
+}
+
+/* Removed the alternating background color as all sections will now be dark transparent */
+.section:nth-child(even) {
+    /* background-color: #f4f4f4; */
+}
+
+h1, h2, h3, h4 {
+    color: white; /* Ensure headings are visible against the dark background */
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #5a6268;
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#background-video {
+    position: fixed; /* Change to fixed to cover the entire page */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; /* Puts the video behind all other content */
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    filter: brightness(60%); /* Darken video for better text readability */
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for text */
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* House Models Section */
+.house-model-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.house-model-card {
+    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter dark for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    color: white; /* Ensure card text is white */
+}
+
+.house-model-card:hover {
+    transform: translateY(-5px);
+}
+
+.house-model-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.house-model-card h3 {
+    margin-top: 0;
+    color: white; /* Ensure headings are visible against the dark card background */
+}
+
+/* Gallery Slider Section Styles */
+.gallery-container {
+    position: relative;
+    width: 100%; /* Make container take full width of its parent */
+    max-width: 900px; /* Still allow a max-width for larger screens */
+    margin: 40px auto; /* Center the container */
+    overflow: hidden; /* Important for hiding images outside current view */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(50, 50, 50, 0.7);
+}
+
+.gallery-slider {
+    display: flex; /* This is crucial for horizontal alignment and sliding */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for slides */
+    /* No fixed width here, let flex items control it */
+}
+
+.gallery-slider img {
+    min-width: 100%; /* Each image takes full width of the slider's visible area, prevents shrinking */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    flex-shrink: 0; /* Prevent images from shrinking */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px; /* Match container border-radius */
+}
+
+/* Slider Navigation Buttons */
+.gallery-control-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px; /* Fixed width for buttons for consistent touch target */
+    height: 40px; /* Fixed height for buttons */
+    padding: 0; /* Remove padding if using fixed width/height */
+    margin-top: -20px; /* Adjust based on new height */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 50%; /* Make them perfectly round */
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    z-index: 2;
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Specific button positioning */
+#prev-btn {
+    left: 10px; /* Adjust distance from edge */
+}
+
+#next-btn {
+    right: 10px; /* Adjust distance from edge */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .gallery-container {
+        margin: 20px auto; /* Reduce margin on smaller screens */
+    }
+
+    .gallery-control-btn {
+        width: 35px; /* Slightly smaller buttons on mobile */
+        height: 35px;
+        font-size: 18px;
+        margin-top: -17.5px;
+    }
+
+    #prev-btn {
+        left: 5px;
+    }
+
+    #next-btn {
+        right: 5px;
+    }
+}
+
+/* No specific dots are implemented in the current JS, so removed dot styles */
+/* If you want dots, you'd need to add them to your HTML and extend the JS */
+
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member-card {
+    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter dark for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: white; /* Ensure card text is white */
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: white; /* Ensure headings are visible against the dark card background */
+}
+
+.team-member-card p {
+    font-size: 0.95em;
+    color: #f0f0f0; /* Slightly lighter text for readability */
+}
+
+/* Footer */
+.footer {
+    position: relative; /* Ensure footer is above the video */
+    background-color: rgba(30, 30, 30, 0.9); /* Darker and more opaque for the footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    z-index: 1; /* Ensure footer is above the video */
+}
+
+.footer .social-links a {
+    color: #a0a0a0; /* Lighter links in the footer */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .house-model-grid, .team-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+}

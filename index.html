@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Space Capsule House</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+<header>
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- Logo/Site Title -->
+        <a href="#" class="rounded-md p-2 hover:bg-white transition-colors duration-300">
+            <img src="images/logo.png" alt="YourSite Logo" class="h-10 md:h-12 w-auto rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/150x50/cccccc/333333?text=Logo+Error';">
+        </a>
+        
+        <!-- Primary Navigation (hidden on small screens) -->
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="#home" class="hover:text-gray-300 transition-colors duration-300">Home</a></li>
+            <li><a href="#about" class="hover:text-gray-300 transition-colors duration-300">About</a></li>
+            <li><a href="#house-models" class="hover:text-gray-300 transition-colors duration-300">Models</a></li>
+            <li><a href="#gallery" class="hover:text-gray-300 transition-colors duration-300">Gallery</a></li>
+            <li><a href="#contact" class="hover:text-gray-300 transition-colors duration-300">Contact</a></li>
+            <li><a href="#team" class="hover:text-gray-300 transition-colors duration-300">Team</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button (hamburger icon) -->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white focus:outline-none focus:text-gray-300">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden hidden bg-gray-800 bg-opacity-90 text-white text-center py-4">
+        <ul class="flex flex-col space-y-4">
+            <li><a href="#home" class="block hover:bg-gray-700 py-2 px-4 rounded">Home</a></li>
+            <li><a href="#about" class="block hover:bg-gray-700 py-2 px-4 rounded">About</a></li>
+            <li><a href="#house-models" class="block hover:bg-gray-700 py-2 px-4 rounded">Models</a></li>
+            <li><a href="#gallery" class="block hover:bg-gray-700 py-2 px-4 rounded">Gallery</a></li>
+            <li><a href="#contact" class="block hover:bg-gray-700 py-2 px-4 rounded">Contact</a></li>
+            <li><a href="#team" class="block hover:bg-gray-700 py-2 px-4 rounded">Team</a></li>
+        </ul>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <video autoplay muted loop id="background-video">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Experience the Future of Living</h1>
+            <p>Innovative Space Capsule Houses for Modern Lifestyles</p>
+            <a href="#house-models" class="btn">Explore Models</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Our Space Capsule Houses</h2>
+            <p>Welcome to the next generation of technology! Our ElonX Ai space capsule combine cutting-edge design with unparalleled comfort and efficiency. Perfect for minimalists, adventurers, or anyone seeking a unique living experience, these Capsule offer a compact yet luxurious environment.</p>
+            <p>Designed with sustainability and smart living in mind, each capsule is a testament to innovative architecture, providing a secure and serene sanctuary wherever you choose to place it.</p>
+        </div>
+    </section>
+
+    <section id="house-models" class="section">
+        <div class="container">
+            <h2>Our House Models</h2>
+            <div class="house-model-grid">
+                <div class="house-model-card">
+                    <img src="images/capsule 1.jpg" alt="Space Capsule Model 1">  
+                    <h3>GOAi - Colony Capsule</h3>
+					<h3>(ELONX 27B)</h3>
+                    <p>
+					<li>labatory</li>
+					<li>shower</li>
+					<li>smart toilet (regular)</li>
+					<li>smart mirror (regular)</li>
+                    <a href="#" class="btn-small">View Details</a>
+                </div>
+                <div class="house-model-card">
+                    <img src="images/capsule 2.jpg" alt="Space Capsule Model 2">
+                    <h3>VTQ - Quest Capsule</h3>
+					<h3>(ELONX 27D)</h3> 
+                    <p>
+                <li> Split Type Aircon & Water Heater </li>
+                <li> Smart Bed </li>
+				<li>Smart Curtain </li>
+				<li>Smart tv </li>
+				<li>Smart Bed </li>
+                <li>5KW Solar & Battery</li></p>
+                    <a href="#" class="btn-small">View Details</a>
+                </div>
+                <div class="house-model-card">
+                    <img src="images/capsule 3.jpg" alt="Space Capsule Model 3">
+                    <h3>AVAA - Resorts Capsule</h3>
+					<h3>(ELONX 27S)</h3>
+                    <p>
+				<li> Split Type Aircon & Water Heater </li>
+                <li> Smart Bed </li>
+				<li>Smart Curtain </li>
+				<li>Smart tv </li>
+				<li>Smart Bed </li>
+                <li>5KW Solar & Battery</li></p>
+                    <a href="#" class="btn-small">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Slider -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Our Space Capsule Models</h2>
+            <div class="gallery-container relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl">
+                <div class="gallery-slider flex transition-transform duration-500 ease-in-out">
+                    <img src="images/gallery1.png" alt="Space Capsule 1" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery2.png" alt="Space Capsule 2" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery3.png" alt="Space Capsule 3" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery4.png" alt="Space Capsule 4" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery5.png" alt="Space Capsule 5" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery6.png" alt="Space Capsule 6" class="w-full h-auto object-cover flex-shrink-0">
+                </div>
+
+                <button id="prev-btn" class="gallery-control-btn absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn" class="gallery-control-btn absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Contact Us Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-center mb-10 text-white">Contact Us</h2>
+            <div class="max-w-4xl mx-auto bg-gray-900 bg-opacity-70 p-8 rounded-lg shadow-xl flex flex-col md:flex-row gap-8">
+                <!-- Contact Form -->
+                <div class="md:w-1/2">
+                    <p class="text-white text-center md:text-left mb-6">Have questions or want to learn more? Send us a message!</p>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-white text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-white text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="your@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-white text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info and Map -->
+                <div class="md:w-1/2 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Our Location & Details</h3>
+                        <p class="text-white mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Starbase Texas 78521 USA</p>
+                        <p class="text-white mb-2"><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                        <p class="text-white mb-2"><i class="fas fa-envelope mr-2"></i> elonxaispacecapsule@gmail.com</p>
+                        
+                        <!-- Social Media Links -->
+                        <div class="flex space-x-4 mt-6">
+                            <a href="https://www.facebook.com/orangeware.don" target="_blank" class="text-white hover:text-blue-500 transition-colors duration-300 text-2xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://x.com/ElonX_Ai" target="_blank" class="text-white hover:text-gray-400 transition-colors duration-300 text-2xl">
+                                <i class="fab fa-twitter"></i> <!-- Using Twitter icon for X -->
+                            </a>
+                            <a href="mailto:elonxaispacecapsule@gmail.com" class="text-white hover:text-red-500 transition-colors duration-300 text-2xl">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Google Map Embed -->
+                    <div class="mt-8 md:mt-0 w-full h-64 bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14345.073354287539!2d-97.19331973650584!3d25.99202582276189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866fb1632384e2d5%3A0xa8d0c7f6e909dc99!2sStarbase%2C%20TX%2078521%2C%20USA!5e0!3m2!1sen!2sph!4v1752221120286!5m2!1sen!2sph"
+                            width="100%"
+                            height="100%"
+                            style="border:0;" 
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <!--
+                            IMPORTANT: Replace the 'src' attribute above with your actual Google Maps embed code.
+                            You can generate an embed code from Google Maps by searching for a location,
+                            clicking "Share", then "Embed a map".
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member-card">
+                    <img src="images/Managment 3.jpg" alt="Team Member 1">
+                    <h3>Annie Misenas</h3>
+                    <p>COO ElonX Philippines</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment.jpg" alt="Team Member 2">
+                    <h3>Lino Laforga Rosete Ph.D</h3>
+                    <p>CTO</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 2.jpg" alt="Team Member 3">
+                    <h3 class="font-bold">Si Yolanda He</h3>
+                    <p>COO ElonX Foshan Production Line</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 4.jpg" alt="Team Member 4">
+                    <h4>Darwin Bartolome</h4>
+                    <p>CEO ELONX Philippines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="flex justify-center space-x-4 mt-6 w-full">
+        <a href="https://www.facebook.com/orangeware.don" target="_blank" class="text-white hover:text-blue-500 transition-colors duration-300 text-2xl">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://x.com/ElonX_Ai" target="_blank" class="text-white hover:text-gray-400 transition-colors duration-300 text-2xl">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="mailto:elonxaispacecapsule@gmail.com" class="text-white hover:text-red-500 transition-colors duration-300 text-2xl">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</footer>
+
+    <script>
+        // Get the mobile menu button and the mobile menu div
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Add an event listener to the button to toggle the 'hidden' class
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gallery Slider functionality
+        const gallerySlider = document.getElementById('gallery-slider');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const images = gallerySlider.querySelectorAll('img');
+        let currentIndex = 0;
+        let startX = 0;
+        let endX = 0;
+
+        function updateSlider() {
+            // Ensure images exist before trying to get clientWidth
+            if (images.length > 0) {
+                const imageWidth = images[0].clientWidth;
+                gallerySlider.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateSlider();
+        });
+
+        // Add touch swipe functionality for mobile
+        gallerySlider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        gallerySlider.addEventListener('touchmove', (e) => {
+            endX = e.touches[0].clientX;
+        });
+
+        gallerySlider.addEventListener('touchend', () => {
+            const diff = startX - endX;
+            if (diff > 50) { // Swiped left
+                currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            } else if (diff < -50) { // Swiped right
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            }
+            updateSlider();
+        });
+
+        // Update slider on window resize to ensure correct positioning
+        window.addEventListener('resize', updateSlider);
+
+        // Initial slider update
+        updateSlider();
+    </script>
+</body>
+</html>
