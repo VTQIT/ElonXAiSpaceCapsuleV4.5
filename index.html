@@ -67,13 +67,16 @@
             <source src="background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <div class="hero-content">
+            <h1>Experience the Future of Living</h1>
+            <p>Innovative Space Capsule Houses for Modern Lifestyles</p>
+            <a href="#house-models" class="btn">Explore Models</a>
+        </div>
     </section>
 
     <section id="about" class="section">
         <div class="container">
-			<h2>ABOUT US</h2>
-            </div>
-        </div>
+            <h2>About Our Space Capsule Houses</h2>
             <p>Welcome to the next generation of technology! Our ElonX Ai space capsule combine cutting-edge design with unparalleled comfort and efficiency. Perfect for minimalists, adventurers, or anyone seeking a unique living experience, these Capsule offer a compact yet luxurious environment.</p>
             <p>Designed with sustainability and smart living in mind, each capsule is a testament to innovative architecture, providing a secure and serene sanctuary wherever you choose to place it.</p>
         </div>
@@ -129,7 +132,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Our Space Capsule Models</h2>
             <div class="gallery-container relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl">
-                <div class="gallery-slider flex transition-transform duration-500 ease-in-out">
+                <div class="gallery-slider flex transition-transform duration-500 ease-in-out" id="gallery-slider">
                     <img src="images/gallery1.png" alt="Space Capsule 1" class="w-full h-auto object-cover flex-shrink-0">
                     <img src="images/gallery2.png" alt="Space Capsule 2" class="w-full h-auto object-cover flex-shrink-0">
                     <img src="images/gallery3.png" alt="Space Capsule 3" class="w-full h-auto object-cover flex-shrink-0">
@@ -262,66 +265,47 @@
 </footer>
 
     <script>
-        // Get the mobile menu button and the mobile menu div
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    const gallerySlider = document.getElementById('gallery-slider');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const images = gallerySlider.querySelectorAll('img');
 
-        // Add an event listener to the button to toggle the 'hidden' class
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    let currentIndex = 0;
+    let startX = 0;
 
-        // Gallery Slider functionality
-        const gallerySlider = document.getElementById('gallery-slider');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const images = gallerySlider.querySelectorAll('img');
-        let currentIndex = 0;
-        let startX = 0;
-        let endX = 0;
+    function updateSlider() {
+        const sliderWidth = gallerySlider.clientWidth;
+        gallerySlider.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+    }
 
-        function updateSlider() {
-            // Ensure images exist before trying to get clientWidth
-            if (images.length > 0) {
-                const imageWidth = images[0].clientWidth;
-                gallerySlider.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-            }
-        }
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            updateSlider();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            updateSlider();
-        });
-
-        // Add touch swipe functionality for mobile
-        gallerySlider.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        gallerySlider.addEventListener('touchmove', (e) => {
-            endX = e.touches[0].clientX;
-        });
-
-        gallerySlider.addEventListener('touchend', () => {
-            const diff = startX - endX;
-            if (diff > 50) { // Swiped left
-                currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            } else if (diff < -50) { // Swiped right
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            }
-            updateSlider();
-        });
-
-        // Update slider on window resize to ensure correct positioning
-        window.addEventListener('resize', updateSlider);
-
-        // Initial slider update
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
         updateSlider();
-    </script>
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlider();
+    });
+
+    gallerySlider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    gallerySlider.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (diff > 50) {
+            currentIndex = (currentIndex + 1) % images.length;
+        } else if (diff < -50) {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+        }
+        updateSlider();
+    });
+
+    window.addEventListener('resize', updateSlider);
+    window.addEventListener('load', updateSlider);
+</script>
 </body>
 </html>
