@@ -16,7 +16,7 @@ body {
 
 /* Header Section - Made transparent dark gray */
 header {
-    position: relative; /* Ensure header is above the video */
+    position: relative; /* Ensure header is above other content */
     background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray for header */
     color: white;
     box-shadow: none; /* Remove existing shadow as it might clash */
