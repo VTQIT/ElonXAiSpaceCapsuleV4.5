@@ -37,6 +37,7 @@ header nav a {
 }
 
 
+
 .section {
     padding: 60px 0;
     text-align: center;
@@ -130,6 +131,64 @@ h1, h2, h3, h4 {
 .hero-content p {
     font-size: 1.2em;
     margin-bottom: 30px;
+}
+
+.marketing-intro {
+    background-color: #1a344d;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.marketing-intro h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00bcd4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.marketing-content {
+    position: relative; /* Needed for overlay effect */
+    padding-bottom: 40px; /* Space for the button */
+}
+
+
+
+/* See More / Less Functionality */
+.marketing-content .more-content {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    opacity: 0;
+}
+
+.marketing-content.expanded .more-content {
+    max-height: 500px; /* Adjust based on content height */
+    opacity: 1;
+}
+
+.see-more-btn {
+    background-color: #00bcd4;
+    color: #0d1a26;
+    border: none;
+    padding: 4px 4px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px; /* Space above button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.see-more-btn:hover {
+    background-color: #0097a7;
+    transform: translateX(-50%) translateY(-2px);
 }
 
 /* House Models Section */
