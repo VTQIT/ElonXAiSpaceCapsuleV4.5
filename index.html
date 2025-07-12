@@ -1,350 +1,440 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Space Capsule House</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social media icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background-color: #f3f4f6; /* Light gray background */
-        }
-    </style>
-</head>
-<body>
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    /* Removed the body background color as the video will be the main background */
+}
 
-    <!-- Header Section -->
-<header>
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <!-- Logo/Site Title -->
-        <a href="#" class="rounded-md p-2 hover:bg-white transition-colors duration-300">
-            <img src="images/logo.png" alt="YourSite Logo" class="h-10 md:h-12 w-auto rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/150x50/cccccc/333333?text=Logo+Error';">
-        </a>
-        
-        <!-- Primary Navigation (hidden on small screens) -->
-        <ul class="hidden md:flex space-x-6 text-lg">
-            <li><a href="#home" class="hover:text-gray-300 transition-colors duration-300">Home</a></li>
-            <li><a href="#about" class="hover:text-gray-300 transition-colors duration-300">About</a></li>
-            <li><a href="#house-models" class="hover:text-gray-300 transition-colors duration-300">Models</a></li>
-            <li><a href="#gallery" class="hover:text-gray-300 transition-colors duration-300">Gallery</a></li>
-            <li><a href="#contact" class="hover:text-gray-300 transition-colors duration-300">Contact</a></li>
-            <li><a href="#team" class="hover:text-gray-300 transition-colors duration-300">Team</a></li>
-        </ul>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        <!-- Mobile Menu Button (hamburger icon) -->
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-white focus:outline-none focus:text-gray-300">
-                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
+/* Header Section - Made transparent dark gray */
+header {
+    position: relative; /* Ensure header is above other content */
+    background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray for header */
+    color: white;
+    box-shadow: none; /* Remove existing shadow as it might clash */
+    z-index: 10; /* Give a higher z-index to ensure it's always on top */
+}
 
-    <!-- Mobile Menu Dropdown -->
-    <div id="mobile-menu" class="md:hidden hidden bg-gray-800 bg-opacity-90 text-white text-center py-4">
-        <ul class="flex flex-col space-y-4">
-            <li><a href="#home" class="block hover:bg-gray-700 py-2 px-4 rounded">Home</a></li>
-            <li><a href="#about" class="block hover:bg-gray-700 py-2 px-4 rounded">About</a></li>
-            <li><a href="#house-models" class="block hover:bg-gray-700 py-2 px-4 rounded">Models</a></li>
-            <li><a href="#gallery" class="block hover:bg-gray-700 py-2 px-4 rounded">Gallery</a></li>
-            <li><a href="#contact" class="block hover:bg-gray-700 py-2 px-4 rounded">Contact</a></li>
-            <li><a href="#team" class="block hover:bg-gray-700 py-2 px-4 rounded">Team</a></li>
-        </ul>
-    </div>
-</header>
+header nav a {
+    color: white !important; /* Ensure nav links are white */
+}
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="home">
-        <video autoplay muted loop id="background-video">
-            <source src="background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-            <h1>ELON X</h1>
-            <p>Etherneom Livingspace in an Open Nested Neomlinked Network Xperiment</p>
-        </div>
-	  </div>
-    </div>
-   </div>
- </div>
-</div>
-    </div>
-    </section>
-	<section class="video-presentation-section">
-    <div class="container">
-        <h2 class="text-3xl font-bold text-center mb-10 text-white" />
-        <div class="video-wrapper">
-            <iframe
-                src="https://www.youtube.com/embed/5zigCZWH-v0?autoplay=1&mute=1&loop=1&playlist=5zigCZWH-v0&controls=1&showinfo=0&modestbranding=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-</section>
-    <section id="about" class="section">
-        <div class="container">
-            <h2>ElonX Ai Space Capsule</h2>
-			</div>
-        </div>
-	        </div>
-        </div>
-	  </div>
-   </div>
-    <div class="marketing-content">
-        <p>Welcome to ELON X (Etherneom Livingspace in an Open Nested Neomlinked Network Xperiment)—the next generation of smart, Ai-integrated, blockchain-backed living! Our ElonX Smart Ai Colony Space Capsules combine cutting-edge design with unparalleled comfort and efficiency, offering minimalist living spaces of 27 square meters (Couple Model) and 38 square meters (Family Model).
-		Perfect for minimalists, adventurers, or anyone seeking a unique living experience, these capsules provide a compact yet luxurious, Ai-automation-ready environment.  </p>
-      	   </div>
-        </div>
-	  </div>
-        <div class="more-content" id="moreMarketingContent">
-        <button class="see-more-btn" id="toggleMarketingBtn">See More</button>
-    </div>
-</section>
-    <section id="house-models" class="section">
-        <div class="container">
-            <h2>Our House Models</h2>
-            <div class="house-model-grid">
-                <div class="house-model-card">
-                    <img src="images/capsule 1.jpg" alt="Space Capsule Model 1">  
-                    <h3>GOAi - Colony Capsule</h3>
-					<h3>(ELONX 27B)</h3>
-                    <p>
-					<li>labatory</li>
-					<li>shower</li>
-					<li>smart toilet (regular)</li>
-					<li>smart mirror (regular)</li>
-                    <a href="#" class="btn-small">View Details</a>
-                </div>
-                <div class="house-model-card">
-                    <img src="images/capsule 2.jpg" alt="Space Capsule Model 2">
-                    <h3>VTQ - Quest Capsule</h3>
-					<h3>(ELONX 27D)</h3> 
-                    <p>
-                <li> Split Type Aircon & Water Heater </li>
-                <li> Smart Bed </li>
-				<li>Smart Curtain </li>
-				<li>Smart tv </li>
-				<li>Smart Bed </li>
-                <li>5KW Solar & Battery</li></p>
-                    <a href="#" class="btn-small">View Details</a>
-                </div>
-                <div class="house-model-card">
-                    <img src="images/capsule 3.jpg" alt="Space Capsule Model 3">
-                    <h3>AVAA - Resorts Capsule</h3>
-					<h3>(ELONX 27S)</h3>
-                    <p>
-				<li> Split Type Aircon & Water Heater </li>
-                <li> Smart Bed </li>
-				<li>Smart Curtain </li>
-				<li>Smart tv </li>
-				<li>Smart Bed </li>
-                <li>5KW Solar & Battery</li></p>
-                    <a href="#" class="btn-small">View Details</a>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Mobile Menu - also made transparent dark gray */
+#mobile-menu {
+    background-color: rgba(30, 30, 30, 0.9) !important; /* Slightly more opaque for mobile menu */
+}
 
-    <!-- Gallery Section with Slider -->
-    <section id="gallery" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Our Space Capsule System Control OS</h2>
-            <div class="gallery-container relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl">
-                <div class="gallery-slider flex transition-transform duration-500 ease-in-out" id="gallery-slider">
-                    <img src="images/gallery1.png" alt="Space Capsule 1" class="w-full h-auto object-cover flex-shrink-0">
-                    <img src="images/gallery2.png" alt="Space Capsule 2" class="w-full h-auto object-cover flex-shrink-0">
-                    <img src="images/gallery3.png" alt="Space Capsule 3" class="w-full h-auto object-cover flex-shrink-0">
-                    <img src="images/gallery4.png" alt="Space Capsule 4" class="w-full h-auto object-cover flex-shrink-0">
-                    <img src="images/gallery5.png" alt="Space Capsule 5" class="w-full h-auto object-cover flex-shrink-0">
-                    <img src="images/gallery6.png" alt="Space Capsule 6" class="w-full h-auto object-cover flex-shrink-0">
-                </div>
+#mobile-menu a {
+    color: white !important; /* Ensure mobile menu links are white */
+}
 
-                <button id="prev-btn" class="gallery-control-btn absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button id="next-btn" class="gallery-control-btn absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
 
-    <!-- New Contact Us Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="text-3xl font-bold text-center mb-10 text-white">Contact Us</h2>
-            <div class="max-w-4xl mx-auto bg-gray-900 bg-opacity-70 p-8 rounded-lg shadow-xl flex flex-col md:flex-row gap-8">
-                <!-- Contact Form -->
-                <div class="md:w-1/2">
-                    <p class="text-white text-center md:text-left mb-6">Have questions or want to learn more? Send us a message!</p>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-white text-sm font-medium mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-white text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="your@example.com" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-white text-sm font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="Your message..." required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
 
-                <!-- Contact Info and Map -->
-                <div class="md:w-1/2 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-4">Our Location & Details</h3>
-                        <p class="text-white mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Starbase Texas 78521 USA</p>
-                        <p class="text-white mb-2"><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
-                        <p class="text-white mb-2"><i class="fas fa-envelope mr-2"></i> elonxaispacecapsule@gmail.com</p>
-                        
-                        <!-- Social Media Links -->
-                        <div class="flex space-x-4 mt-6">
-                            <a href="https://www.facebook.com/orangeware.don" target="_blank" class="text-white hover:text-blue-500 transition-colors duration-300 text-2xl">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://x.com/ElonX_Ai" target="_blank" class="text-white hover:text-gray-400 transition-colors duration-300 text-2xl">
-                                <i class="fab fa-twitter"></i> <!-- Using Twitter icon for X -->
-                            </a>
-                            <a href="mailto:elonxaispacecapsule@gmail.com" class="text-white hover:text-red-500 transition-colors duration-300 text-2xl">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
+.section {
+    padding: 60px 0;
+    text-align: center;
+    /* Apply transparent dark gray background to all sections below the hero */
+    position: relative; /* Essential for z-index to work against the fixed video */
+    background-color: rgba(30, 30, 30, 0.8); /* Dark gray with 80% opacity */
+    color: white; /* Adjust text color for readability against dark background */
+    margin-top: 1rem; /* Add some margin between sections if desired */
+    z-index: 1; /* Ensure these sections are above the video */
+}
 
-                    <!-- Google Map Embed -->
-                    <div class="mt-8 md:mt-0 w-full h-64 bg-gray-800 rounded-lg overflow-hidden shadow-md">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14345.073354287539!2d-97.19331973650584!3d25.99202582276189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866fb1632384e2d5%3A0xa8d0c7f6e909dc99!2sStarbase%2C%20TX%2078521%2C%20USA!5e0!3m2!1sen!2sph!4v1752221120286!5m2!1sen!2sph"
-                            width="100%"
-                            height="100%"
-                            style="border:0;" 
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        <!--
-                            IMPORTANT: Replace the 'src' attribute above with your actual Google Maps embed code.
-                            You can generate an embed code from Google Maps by searching for a location,
-                            clicking "Share", then "Embed a map".
-                        -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="team" class="section">
-        <div class="container">
-            <h2>Our Team</h2>
-			     </div>
-            </div>
-			<div class="team-grid">
-			<div class="team-member-card">
-                    <img src="images/Managment 006.jpg" alt="Team Member 2">
-                    <h3>Jacon Naimi</h3>
-                    <p>CEO for One EARTH and ETHERNEOM DC³</p>
-                </div>
-                <div class="team-member-card">
-				    <img src="images/Managment 004.jpg" alt="Team Member 4">
-                    <h4>Darwin Bartolome</h4>
-                    <p>CEO ELONX Philippines</p>
-				</div>
-				<div class="team-member-card">
-                    <img src="images/Managment 003.jpg" alt="Team Member 1">
-                    <h3>Annie Misenas</h3>
-                    <p>COO ElonX Philippines</p>
-                </div>
-				<div class="team-member-card">
-                    <img src="images/Managment 001.jpg" alt="Team Member 2">
-                    <h3>Lino Laforga Rosete Ph.D</h3>
-                    <p>CTO</p>
-                </div>
-				<div class="team-member-card">
-				   <img src="images/Managment 005.jpg" alt="Team Member 4">
-				   <h3>Archt Jimmy Chan</h3>
-                    <p>Chief Design Architect (Shenzhen Design HQ)</p>
-                </div>
-                <div class="team-member-card">
-                    <img src="images/Managment 002.jpg" alt="Team Member 3">
-                    <h3 class="font-bold">Yolanda He</h3>
-                    <p>COO ElonX Foshan Production Line</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Removed the alternating background color as all sections will now be dark transparent */
+.section:nth-child(even) {
+    /* background-color: #f4f4f4; */
+}
 
-    <footer class="footer">
-    <div class="flex justify-center space-x-4 mt-6 w-full">
-        <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-2xl">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="YOUR_YOUTUBE_CHANNEL_URL" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-2xl">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <a href="YOUR_TIKTOK_PROFILE_URL" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-2xl">
-            <i class="fab fa-tiktok"></i>
-        </a>
-    </div>
-</footer>
+h1, h2, h3, h4 {
+    color: white; /* Ensure headings are visible against the dark background */
+    margin-bottom: 20px;
+}
 
-    <script>
-    const gallerySlider = document.getElementById('gallery-slider');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const images = gallerySlider.querySelectorAll('img');
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-    let currentIndex = 0;
-    let startX = 0;
+.btn:hover {
+    background-color: #0056b3;
+}
 
-    function updateSlider() {
-        const sliderWidth = gallerySlider.clientWidth;
-        gallerySlider.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+.btn-small {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #5a6268;
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#background-video {
+    position: fixed; /* Change to fixed to cover the entire page */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; /* Puts the video behind all other content */
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    filter: brightness(60%); /* Darken video for better text readability */
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for text */
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.marketing-intro {
+    background-color: #1a344d;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.marketing-intro h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00bcd4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.marketing-content {
+    position: relative; /* Needed for overlay effect */
+    padding-bottom: 40px; /* Space for the button */
+}
+
+
+
+/* See More / Less Functionality */
+.marketing-content .more-content {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    opacity: 0;
+}
+
+.marketing-content.expanded .more-content {
+    max-height: 500px; /* Adjust based on content height */
+    opacity: 1;
+}
+
+.see-more-btn {
+    background-color: #00bcd4;
+    color: #0d1a26;
+    border: none;
+    padding: 4px 4px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px; /* Space above button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.see-more-btn:hover {
+    background-color: #0097a7;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+/* House Models Section */
+.house-model-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.house-model-card {
+    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter dark for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    color: white; /* Ensure card text is white */
+}
+
+.house-model-card:hover {
+    transform: translateY(-5px);
+}
+
+.house-model-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.house-model-card h3 {
+    margin-top: 0;
+    color: white; /* Ensure headings are visible against the dark card background */
+}
+
+/* Gallery Slider Section Styles */
+.gallery-container {
+    position: relative;
+    width: 100%; /* Make container take full width of its parent */
+    max-width: 900px; /* Still allow a max-width for larger screens */
+    margin: 40px auto; /* Center the container */
+    overflow: hidden; /* Important for hiding images outside current view */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(50, 50, 50, 0.7);
+}
+
+.gallery-slider {
+    display: flex; /* This is crucial for horizontal alignment and sliding */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for slides */
+    /* No fixed width here, let flex items control it */
+}
+
+.gallery-slider img {
+    min-width: 100%; /* Each image takes full width of the slider's visible area, prevents shrinking */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    flex-shrink: 0; /* Prevent images from shrinking */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px; /* Match container border-radius */
+}
+
+/* Slider Navigation Buttons */
+.gallery-control-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px; /* Fixed width for buttons for consistent touch target */
+    height: 40px; /* Fixed height for buttons */
+    padding: 0; /* Remove padding if using fixed width/height */
+    margin-top: -20px; /* Adjust based on new height */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 50%; /* Make them perfectly round */
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    z-index: 2;
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Specific button positioning */
+#prev-btn {
+    left: 10px; /* Adjust distance from edge */
+}
+
+#next-btn {
+    right: 10px; /* Adjust distance from edge */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .gallery-container {
+        margin: 20px auto; /* Reduce margin on smaller screens */
     }
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        updateSlider();
-    });
+    .gallery-control-btn {
+        width: 35px; /* Slightly smaller buttons on mobile */
+        height: 35px;
+        font-size: 18px;
+        margin-top: -17.5px;
+    }
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateSlider();
-    });
+    #prev-btn {
+        left: 5px;
+    }
 
-    gallerySlider.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
+    #next-btn {
+        right: 5px;
+    }
+}
 
-    gallerySlider.addEventListener('touchend', (e) => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
+/* No specific dots are implemented in the current JS, so removed dot styles */
+/* If you want dots, you'd need to add them to your HTML and extend the JS */
 
-        if (diff > 50) {
-            currentIndex = (currentIndex + 1) % images.length;
-        } else if (diff < -50) {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-        }
-        updateSlider();
-    });
 
-    window.addEventListener('resize', updateSlider);
-    window.addEventListener('load', updateSlider);
-</script>
-</body>
-</html>
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member-card {
+    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter dark for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    color: white; /* Ensure card text is white */
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007bff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: white; /* Ensure headings are visible against the dark card background */
+}
+
+.team-member-card p {
+    font-size: 0.95em;
+    color: #f0f0f0; /* Slightly lighter text for readability */
+}
+
+/* Footer */
+.footer {
+    position: relative; /* Ensure footer is above the video */
+    background-color: rgba(30, 30, 30, 0.9); /* Darker and more opaque for the footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    z-index: 1; /* Ensure footer is above the video */
+}
+
+.footer .social-links a {
+    color: #a0a0a0; /* Lighter links in the footer */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .house-model-grid, .team-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+}
+
+/* Video Presentation Section - No change needed here if already full block */
+/* Video Wrapper - No change needed here for full block aspect ratio container */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* For 16:9 Aspect Ratio (height / width * 100%) */
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+
+/* New rule for the iframe inside video-wrapper */
+.video-wrapper iframe { /* Target the iframe specifically */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Ensures no default iframe border */
+}
+
+/* Responsive adjustments for smaller screens - No change needed */
+@media (max-width: 768px) {
+    .video-presentation-section {
+        padding: 0;
+    }
+    .video-wrapper {
+        padding-bottom: 56.25%;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .video-presentation-section {
+        padding: 0; /* Ensure no padding on smaller screens as well */
+    }
+    .video-wrapper {
+        padding-bottom: 56.25%; /* Maintain aspect ratio */
+    }
+}
