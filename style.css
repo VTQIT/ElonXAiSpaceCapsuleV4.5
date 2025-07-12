@@ -336,16 +336,6 @@ h1, h2, h3, h4 {
 }
 
 /* Video Presentation Section */
-.video-presentation-section {
-    padding: 60px 0;
-    text-align: center;
-    position: relative;
-    background-color: rgba(30, 30, 30, 0.8);
-    color: white;
-    margin-top: 1rem;
-    z-index: 1;
-}
-
 .video-wrapper {
     position: relative;
     width: 100%;
