@@ -145,7 +145,7 @@ h1, h2, h3, h4 {
 
 .marketing-intro h2 {
     font-family: 'Orbitron', sans-serif;
-    color: #00bcd4;
+    color: white; /* Changed to white */
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -155,7 +155,9 @@ h1, h2, h3, h4 {
     padding-bottom: 40px; /* Space for the button */
 }
 
-
+.marketing-content p { /* Added this rule to make paragraphs white */
+    color: white;
+}
 
 /* See More / Less Functionality */
 .marketing-content .more-content {
