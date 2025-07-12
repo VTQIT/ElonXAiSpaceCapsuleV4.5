@@ -134,7 +134,7 @@ h1, h2, h3, h4 {
 }
 
 .marketing-intro {
-    background-color: #1a344d;
+    background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray */
     padding: 30px;
     margin-bottom: 40px;
     border-radius: 8px;
@@ -145,7 +145,7 @@ h1, h2, h3, h4 {
 
 .marketing-intro h2 {
     font-family: 'Orbitron', sans-serif;
-    color: white; /* Changed to white */
+    color: white;
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -155,7 +155,7 @@ h1, h2, h3, h4 {
     padding-bottom: 40px; /* Space for the button */
 }
 
-.marketing-content p { /* Added this rule to make paragraphs white */
+.marketing-content p {
     color: white;
 }
 
