@@ -181,7 +181,6 @@ h1, h2, h3, h4 {
     font-size: 1em;
     cursor: pointer;
     margin-top: 15px; /* Space above button */
-    transition: background-color 0.3s ease, transform 0.2s ease;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -441,16 +440,21 @@ h1, h2, h3, h4 {
     }
 }
 
-/* Floating Chatbot Icon - Modified for Animation */
-/* Floating Chatbot Icon - Modified for Animation */
+/* Floating Chatbot Icon - MODIFIED FOR MOUSE INTERACTION */
 .chatbot-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: absolute; /* Changed from 'fixed' to 'absolute' */
+    /* Remove bottom and right, as JS will control position */
+    /* bottom: 20px; */
+    /* right: 20px; */
     z-index: 1000;
-    cursor: pointer;
-    animation: floatAround 10s ease-in-out infinite;
+    cursor: grab; /* Cursor changes to indicate it's draggable */
+    transition: transform 0.1s ease-out; /* Smoother, faster transition for mouse tracking */
+    /* Remove existing animation */
+    animation: none;
     transform-origin: center center;
+    top: 50%; /* Initial position, will be overridden by JS */
+    left: 50%; /* Initial position, will be overridden by JS */
+    transform: translate(-50%, -50%); /* Center the icon initially */
 }
 
 .chatbot-icon img {
@@ -461,12 +465,17 @@ h1, h2, h3, h4 {
     border: 3px solid #007bff;
 }
 
+/* Remove or modify the hover effect if it conflicts */
+.chatbot-icon:hover {
+    /* cursor: grabbing; /* Optional: change cursor when dragging */
+}
+
 /* Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
     .chatbot-icon {
-        bottom: 15px;
-        right: 15px;
-        animation: floatAroundMobile 10s ease-in-out infinite;
+        /* On mobile, we might want to disable mouse tracking or use touch events */
+        /* For now, we'll keep it absolute, but touch events would be ideal */
+        animation: none; /* Ensure no animation on mobile for mouse tracking */
     }
     .chatbot-icon img {
         width: 70px; /* Changed from 60px to 70px */
@@ -474,40 +483,141 @@ h1, h2, h3, h4 {
     }
 }
 
-/* Keyframes for the floating animation (Desktop) */
-@keyframes floatAround {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    25% {
-        transform: translate(-10px, -20px) scale(1.02); /* Move slightly left and up, slightly enlarge */
-    }
-    50% {
-        transform: translate(0, -40px) scale(1); /* Move further up, back to original size */
-    }
-    75% {
-        transform: translate(10px, -20px) scale(1.02); /* Move slightly right and up, slightly enlarge */
-    }
-    100% {
-        transform: translate(0, 0) scale(1); /* Return to original position and size */
-    }
+/* Chatbot Window Styling */
+.chatbot-window {
+    position: fixed;
+    bottom: 90px; /* Position above the chatbot icon */
+    right: 20px;
+    width: 320px; /* Standard width for a chat window */
+    height: 400px; /* Standard height */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999; /* Slightly lower than icon, but still on top */
+    transform: translateY(20px) scale(0.95); /* Initial hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out; /* Smooth transition for show/hide */
 }
 
-/* Keyframes for the floating animation (Mobile - slightly less intense movement) */
-@keyframes floatAroundMobile {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    25% {
-        transform: translate(-5px, -10px) scale(1.01);
-    }
-    50% {
-        transform: translate(0, -20px) scale(1);
-    }
-    75% {
-        transform: translate(5px, -10px) scale(1.01);
-    }
-    100% {
-        transform: translate(0, 0) scale(1);
+.chatbot-window.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.chatbot-header .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+    transition: color 0.2s;
+}
+
+.chatbot-header .close-btn:hover {
+    color: #f0f0f0;
+}
+
+.chatbot-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto; /* Enable scrolling for content */
+    background-color: #f9f9f9;
+}
+
+.chatbot-message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 85%;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.bot-message {
+    background-color: #e2f0ff; /* Light blue for bot messages */
+    color: #333;
+    align-self: flex-start; /* Align to the left */
+    border-bottom-left-radius: 2px;
+}
+
+.question-list button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: #e9ecef; /* Light gray button */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.question-list button:hover {
+    background-color: #d8dee4;
+    border-color: #c4ccd2;
+}
+
+.answer-display {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0; /* Slightly darker background for answers */
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #555;
+    white-space: pre-wrap; /* Preserve formatting for answers */
+}
+
+.answer-display h4 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.05em;
+    margin-bottom: 8px;
+}
+
+.chatbot-footer {
+    background-color: #eee;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .chatbot-window {
+        bottom: 70px; /* Adjust position for smaller icon */
+        right: 15px;
+        width: 90%; /* Take up more width on small screens */
+        max-width: 300px; /* Max width to prevent it from being too big */
+        height: 350px;
     }
 }
