@@ -283,13 +283,13 @@
 </footer>
 
     <div class="chatbot-icon" id="chatbotIcon">
-        <img src="d991f696-7e3a-408f-a2d5-e8f92dbcd728.png" alt="Chatbot Icon">
+        <img src="d991f696-7e3a-408f-a2d5-e8f92db4d728.png" alt="Chatbot Icon">
     </div>
 
     <div class="chatbot-window" id="chatbotWindow">
         <div class="chatbot-header">
             <h3>How can I help you?</h3>
-            <button class="close-btn" id="closeChatbotBtn">&times;</button>
+            <button class="close-btn" id="closeChatbotBtn">×</button>
         </div>
         <div class="chatbot-body" id="chatbotBody">
             <p class="chatbot-message bot-message">Hello! I'm your virtual assistant. Please choose a question below:</p>
@@ -442,44 +442,63 @@
     let iconY = window.innerHeight / 2;
     const speed = 0.05;
 
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
+    // Detect if it's a touch device
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 
-    function animateChatbot() {
-        // Only move if the chat window is NOT active
-        if (!chatbotWindow.classList.contains('active')) {
-            const dx = mouseX - (iconX + chatbotIcon.clientWidth / 2);
-            const dy = mouseY - (iconY + chatbotIcon.clientHeight / 2);
+    if (!isTouchDevice) { // Only enable mouse tracking on non-touch devices
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
 
-            iconX += dx * speed;
-            iconY += dy * speed;
+        function animateChatbot() {
+            // Only move if the chat window is NOT active
+            if (!chatbotWindow.classList.contains('active')) {
+                const dx = mouseX - (iconX + chatbotIcon.clientWidth / 2);
+                const dy = mouseY - (iconY + chatbotIcon.clientHeight / 2);
 
-            chatbotIcon.style.left = `${iconX}px`;
-            chatbotIcon.style.top = `${iconY}px`;
+                iconX += dx * speed;
+                iconY += dy * speed;
+
+                chatbotIcon.style.left = `${iconX}px`;
+                chatbotIcon.style.top = `${iconY}px`;
+            }
+            requestAnimationFrame(animateChatbot);
         }
-        requestAnimationFrame(animateChatbot);
-    }
 
-    window.addEventListener('load', () => {
-        // Set initial position based on viewport center (can adjust)
-        iconX = window.innerWidth / 2 - chatbotIcon.clientWidth / 2;
-        iconY = window.innerHeight / 2 - chatbotIcon.clientHeight / 2;
-        chatbotIcon.style.left = `${iconX}px`;
-        chatbotIcon.style.top = `${iconY}px`;
-        animateChatbot();
-    });
-
-    window.addEventListener('resize', () => {
-        // Re-center if window resized, but only if chatbot window is closed
-        if (!chatbotWindow.classList.contains('active')) {
+        window.addEventListener('load', () => {
+            // Set initial position based on viewport center (can adjust)
             iconX = window.innerWidth / 2 - chatbotIcon.clientWidth / 2;
             iconY = window.innerHeight / 2 - chatbotIcon.clientHeight / 2;
             chatbotIcon.style.left = `${iconX}px`;
             chatbotIcon.style.top = `${iconY}px`;
-        }
-    });
+            animateChatbot();
+        });
+
+        window.addEventListener('resize', () => {
+            // Re-center if window resized, but only if chatbot window is closed
+            if (!chatbotWindow.classList.contains('active')) {
+                iconX = window.innerWidth / 2 - chatbotIcon.clientWidth / 2;
+                iconY = window.innerHeight / 2 - chatbotIcon.clientHeight / 2;
+                chatbotIcon.style.left = `${iconX}px`;
+                chatbotIcon.style.top = `${iconY}px`;
+            }
+        });
+    } else {
+        // For touch devices, ensure the chatbot icon is fixed (or set initial position)
+        // and doesn't try to follow touch gestures.
+        // We can explicitly set its position using CSS, or
+        // if its position:absolute is within a relative body/main,
+        // we can set its 'top' and 'left' here, but it won't move.
+        // For simplicity, we'll revert its CSS positioning to fixed for mobile.
+        chatbotIcon.style.position = 'fixed';
+        chatbotIcon.style.bottom = '20px'; /* Match your desired fixed mobile position */
+        chatbotIcon.style.right = '20px';
+        chatbotIcon.style.top = 'auto'; /* Clear top property */
+        chatbotIcon.style.left = 'auto'; /* Clear left property */
+        chatbotIcon.style.transform = 'none'; /* Remove translate(-50%, -50%) */
+        chatbotIcon.style.cursor = 'pointer'; // Make it clear it's clickable, not draggable
+    }
 </script>
 </body>
 </html>
