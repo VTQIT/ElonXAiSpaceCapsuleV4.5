@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Space Capsule House</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
@@ -20,15 +18,12 @@
 </head>
 <body>
 
-    <!-- Header Section -->
-<header>
+    <header>
     <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <!-- Logo/Site Title -->
         <a href="#" class="rounded-md p-2 hover:bg-white transition-colors duration-300">
             <img src="images/logo.png" alt="YourSite Logo" class="h-10 md:h-12 w-auto rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/150x50/cccccc/333333?text=Logo+Error';">
         </a>
         
-        <!-- Primary Navigation (hidden on small screens) -->
         <ul class="hidden md:flex space-x-6 text-lg">
             <li><a href="#home" class="hover:text-gray-300 transition-colors duration-300">Home</a></li>
             <li><a href="#about" class="hover:text-gray-300 transition-colors duration-300">About</a></li>
@@ -38,7 +33,6 @@
             <li><a href="#team" class="hover:text-gray-300 transition-colors duration-300">Team</a></li>
         </ul>
 
-        <!-- Mobile Menu Button (hamburger icon) -->
         <div class="md:hidden">
             <button id="mobile-menu-button" class="text-white focus:outline-none focus:text-gray-300">
                 <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +42,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu" class="md:hidden hidden bg-gray-800 bg-opacity-90 text-white text-center py-4">
         <ul class="flex flex-col space-y-4">
             <li><a href="#home" class="block hover:bg-gray-700 py-2 px-4 rounded">Home</a></li>
@@ -61,7 +54,6 @@
     </div>
 </header>
 
-    <!-- Hero Section -->
     <section class="hero-section" id="home">
         <video autoplay muted loop id="background-video">
             <source src="background.mp4" type="video/mp4">
@@ -149,7 +141,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section with Slider -->
     <section id="gallery" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Our Space Capsule System Control OS</h2>
@@ -173,12 +164,10 @@
         </div>
     </section>
 
-    <!-- New Contact Us Section -->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="text-3xl font-bold text-center mb-10 text-white">Contact Us</h2>
             <div class="max-w-4xl mx-auto bg-gray-900 bg-opacity-70 p-8 rounded-lg shadow-xl flex flex-col md:flex-row gap-8">
-                <!-- Contact Form -->
                 <div class="md:w-1/2">
                     <p class="text-white text-center md:text-left mb-6">Have questions or want to learn more? Send us a message!</p>
                     <form class="space-y-6">
@@ -199,11 +188,7 @@
                         </button>
                     </form>
                 </div>
-				<div class="chatbot-icon" id="chatbotIcon">
-        <img src="d991f696-7e3a-408f-a2d5-e8f92dbcd728.png" alt="Chatbot Icon">
-    </div>
 
-                <!-- Contact Info and Map -->
                 <div class="md:w-1/2 flex flex-col justify-between">
                     <div>
                         <h3 class="text-xl font-bold text-white mb-4">Our Location & Details</h3>
@@ -211,21 +196,18 @@
                         <p class="text-white mb-2"><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
                         <p class="text-white mb-2"><i class="fas fa-envelope mr-2"></i> elonxaispacecapsule@gmail.com</p>
                         
-                        <!-- Social Media Links -->
                         <div class="flex space-x-4 mt-6">
                             <a href="https://www.facebook.com/orangeware.don" target="_blank" class="text-white hover:text-blue-500 transition-colors duration-300 text-2xl">
                                 <i class="fab fa-facebook"></i>
                             </a>
                             <a href="https://x.com/ElonX_Ai" target="_blank" class="text-white hover:text-gray-400 transition-colors duration-300 text-2xl">
-                                <i class="fab fa-twitter"></i> <!-- Using Twitter icon for X -->
-                            </a>
+                                <i class="fab fa-twitter"></i> </a>
                             <a href="mailto:elonxaispacecapsule@gmail.com" class="text-white hover:text-red-500 transition-colors duration-300 text-2xl">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Google Map Embed -->
                     <div class="mt-8 md:mt-0 w-full h-64 bg-gray-800 rounded-lg overflow-hidden shadow-md">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14345.073354287539!2d-97.19331973650584!3d25.99202582276189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866fb1632384e2d5%3A0xa8d0c7f6e909dc99!2sStarbase%2C%20TX%2078521%2C%20USA!5e0!3m2!1sen!2sph!4v1752221120286!5m2!1sen!2sph"
@@ -236,12 +218,7 @@
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-                        <!--
-                            IMPORTANT: Replace the 'src' attribute above with your actual Google Maps embed code.
-                            You can generate an embed code from Google Maps by searching for a location,
-                            clicking "Share", then "Embed a map".
-                        -->
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -305,6 +282,27 @@
     </div>
 </footer>
 
+    <div class="chatbot-icon" id="chatbotIcon">
+        <img src="d991f696-7e3a-408f-a2d5-e8f92dbcd728.png" alt="Chatbot Icon">
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3>How can I help you?</h3>
+            <button class="close-btn" id="closeChatbotBtn">&times;</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <p class="chatbot-message bot-message">Hello! I'm your virtual assistant. Please choose a question below:</p>
+            <div class="question-list" id="questionList">
+                </div>
+            <div class="answer-display" id="answerDisplay">
+                </div>
+        </div>
+        <div class="chatbot-footer">
+            <p>Powered by Your Company</p>
+        </div>
+    </div>
+
     <script>
     const gallerySlider = document.getElementById('gallery-slider');
     const prevBtn = document.getElementById('prev-btn');
@@ -347,6 +345,141 @@
 
     window.addEventListener('resize', updateSlider);
     window.addEventListener('load', updateSlider);
+
+    // NEW script for chatbot functionality
+    const chatbotIcon = document.getElementById('chatbotIcon');
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    const closeChatbotBtn = document.getElementById('closeChatbotBtn');
+    const questionList = document.getElementById('questionList');
+    const answerDisplay = document.getElementById('answerDisplay');
+
+    // Define your predetermined questions and answers
+    const faqData = [
+        {
+            question: "What products do you offer?",
+            answer: "We offer a range of products including Space Capsule Houses, modular living units, and custom-designed compact homes. Each product is designed for efficiency and modern living."
+        },
+        {
+            question: "How long does installation take?",
+            answer: "Standard installation for our Space Capsule House typically takes 2-3 days, assuming the site is prepared. Larger custom projects may take longer. Our team handles the setup process efficiently."
+        },
+        {
+            question: "What are the payment options?",
+            answer: "We accept various payment methods including bank transfers, major credit cards, and financing options through our partners. A 30% down payment is required to confirm your order."
+        },
+        {
+            question: "Do you provide customization options?",
+            answer: "Yes, we offer extensive customization options for interior layouts, finishes, and smart home integrations to ensure your space perfectly matches your needs and style."
+        },
+        {
+            question: "What is your warranty policy?",
+            answer: "All our Space Capsule Houses come with a 5-year structural warranty and a 1-year warranty on all appliances and fixtures. Extended warranty options are also available."
+        }
+        // Add more questions and answers here!
+    ];
+
+    // Function to populate questions
+    function populateQuestions() {
+        questionList.innerHTML = ''; // Clear previous questions
+        answerDisplay.innerHTML = ''; // Clear previous answers
+        faqData.forEach((item, index) => {
+            const button = document.createElement('button');
+            button.textContent = item.question;
+            button.dataset.index = index; // Store index to retrieve answer
+            button.addEventListener('click', () => displayAnswer(index));
+            questionList.appendChild(button);
+        });
+        // Show the question list and hide the answer display initially
+        questionList.style.display = 'block';
+        answerDisplay.style.display = 'none';
+    }
+
+    // Function to display answer
+    function displayAnswer(index) {
+        const selectedFaq = faqData[index];
+        if (selectedFaq) {
+            answerDisplay.innerHTML = `
+                <h4>${selectedFaq.question}</h4>
+                <p>${selectedFaq.answer}</p>
+                <button class="back-to-questions-btn">← Back to Questions</button>
+            `;
+            questionList.style.display = 'none'; // Hide questions
+            answerDisplay.style.display = 'block'; // Show answer
+
+            // Add event listener for the back button
+            const backButton = answerDisplay.querySelector('.back-to-questions-btn');
+            if (backButton) {
+                backButton.addEventListener('click', populateQuestions); // Go back to questions
+            }
+        }
+    }
+
+
+    if (chatbotIcon) {
+        // Toggle chatbot window visibility
+        chatbotIcon.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('active');
+            if (chatbotWindow.classList.contains('active')) {
+                populateQuestions(); // Load questions when opening
+            }
+        });
+    }
+
+    if (closeChatbotBtn) {
+        // Close chatbot window
+        closeChatbotBtn.addEventListener('click', () => {
+            chatbotWindow.classList.remove('active');
+        });
+    }
+
+    // --- Mouse-controlled chatbot movement (keep this if you want it) ---
+    // You might want to make the chatbot stationary when the chat window is open
+    // Or position it slightly differently.
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let iconX = window.innerWidth / 2;
+    let iconY = window.innerHeight / 2;
+    const speed = 0.05;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateChatbot() {
+        // Only move if the chat window is NOT active
+        if (!chatbotWindow.classList.contains('active')) {
+            const dx = mouseX - (iconX + chatbotIcon.clientWidth / 2);
+            const dy = mouseY - (iconY + chatbotIcon.clientHeight / 2);
+
+            iconX += dx * speed;
+            iconY += dy * speed;
+
+            chatbotIcon.style.left = `${iconX}px`;
+            chatbotIcon.style.top = `${iconY}px`;
+        }
+        requestAnimationFrame(animateChatbot);
+    }
+
+    window.addEventListener('load', () => {
+        // Set initial position based on viewport center (can adjust)
+        iconX = window.innerWidth / 2 - chatbotIcon.clientWidth / 2;
+        iconY = window.innerHeight / 2 - chatbotIcon.clientHeight / 2;
+        chatbotIcon.style.left = `${iconX}px`;
+        chatbotIcon.style.top = `${iconY}px`;
+        animateChatbot();
+    });
+
+    window.addEventListener('resize', () => {
+        // Re-center if window resized, but only if chatbot window is closed
+        if (!chatbotWindow.classList.contains('active')) {
+            iconX = window.innerWidth / 2 - chatbotIcon.clientWidth / 2;
+            iconY = window.innerHeight / 2 - chatbotIcon.clientHeight / 2;
+            chatbotIcon.style.left = `${iconX}px`;
+            chatbotIcon.style.top = `${iconY}px`;
+        }
+    });
 </script>
 </body>
 </html>
