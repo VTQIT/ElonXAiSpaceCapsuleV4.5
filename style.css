@@ -440,3 +440,74 @@ h1, h2, h3, h4 {
         padding-bottom: 56.25%; /* Maintain aspect ratio */
     }
 }
+
+/* Floating Chatbot Icon - Modified for Animation */
+/* Floating Chatbot Icon - Modified for Animation */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    animation: floatAround 10s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+.chatbot-icon img {
+    width: 80px;     /* Changed from 70px to 80px */
+    height: 80px;    /* Changed from 70px to 80px */
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid #007bff;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .chatbot-icon {
+        bottom: 15px;
+        right: 15px;
+        animation: floatAroundMobile 10s ease-in-out infinite;
+    }
+    .chatbot-icon img {
+        width: 70px; /* Changed from 60px to 70px */
+        height: 70px; /* Changed from 60px to 70px */
+    }
+}
+
+/* Keyframes for the floating animation (Desktop) */
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-10px, -20px) scale(1.02); /* Move slightly left and up, slightly enlarge */
+    }
+    50% {
+        transform: translate(0, -40px) scale(1); /* Move further up, back to original size */
+    }
+    75% {
+        transform: translate(10px, -20px) scale(1.02); /* Move slightly right and up, slightly enlarge */
+    }
+    100% {
+        transform: translate(0, 0) scale(1); /* Return to original position and size */
+    }
+}
+
+/* Keyframes for the floating animation (Mobile - slightly less intense movement) */
+@keyframes floatAroundMobile {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-5px, -10px) scale(1.01);
+    }
+    50% {
+        transform: translate(0, -20px) scale(1);
+    }
+    75% {
+        transform: translate(5px, -10px) scale(1.01);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
