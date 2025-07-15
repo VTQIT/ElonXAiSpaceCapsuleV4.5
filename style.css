@@ -621,3 +621,14 @@ h1, h2, h3, h4 {
         height: 350px;
     }
 }
+
+.gallery-container {
+    position: relative;
+    width: 100%; /* Make container take full width of its parent */
+    max-width: 900px; /* Still allow a max-width for larger screens */
+    margin: 40px auto; /* Center the container */
+    overflow: hidden; /* Important for hiding images outside current view */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(50, 50, 50, 0.7); /* This is already set to transparent gray! */
+}
