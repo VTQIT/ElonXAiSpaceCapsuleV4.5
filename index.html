@@ -95,7 +95,32 @@
                 <button 
 				   class="see-more-btn" id="toggleMarketingBtn">See More</button>
             </div>
-        </section>
+	    </div>
+	
+	
+	</section>
+        <section id="customer-projects" class="py-16 bg-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800"></h2>
+            <div class="gallery-container relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl">
+                <div class="gallery-slider flex transition-transform duration-500 ease-in-out" id="customer-projects-slider">
+                    <img src="images/photo01.png" alt="Customer Project 1" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/photo02.png" alt="Customer Project 2" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/customer-project-3.jpg" alt="Customer Project 3" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/customer-project-4.jpg" alt="Customer Project 4" class="w-full h-auto object-cover flex-shrink-0">
+                </div>
+
+                <button id="prev-btn-2" class="gallery-control-btn absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn-2" class="gallery-control-btn absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+
+
 </section>
     <section id="house-models" class="section">
         <div class="container">
@@ -165,6 +190,7 @@
         </div>
     </section>
 
+    
     <section id="contact" class="section">
         <div class="container">
             <h2 class="text-3xl font-bold text-center mb-10 text-white">Contact Us</h2>
@@ -284,7 +310,7 @@
         <a href="https://x.com/ElonX_Ai" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300">
             <img src="image_b0ea1a.png" alt="X logo" class="h-8 w-8 object-contain">
         </a>
-        <a href="mailto:elonxaispacecapsule@gmail.com" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-3xl">
+       <a href="mailto:elonxaispacecapsule@gmail.com">Send an Email</a> class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-3xl">
             <i class="fas fa-envelope"></i>
         </a>
         <a href="https://www.instagram.com/elonx.25/" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-3xl">
@@ -359,6 +385,51 @@
 
     window.addEventListener('resize', updateSlider);
     window.addEventListener('load', updateSlider);
+
+
+    // NEW SCRIPT FOR SECOND GALLERY SLIDER
+    const customerProjectsSlider = document.getElementById('customer-projects-slider');
+    const prevBtn2 = document.getElementById('prev-btn-2');
+    const nextBtn2 = document.getElementById('next-btn-2');
+    const customerProjectImages = customerProjectsSlider.querySelectorAll('img');
+
+    let currentIndex2 = 0;
+    let startX2 = 0;
+
+    function updateCustomerProjectsSlider() {
+        const sliderWidth2 = customerProjectsSlider.clientWidth;
+        customerProjectsSlider.style.transform = `translateX(-${currentIndex2 * sliderWidth2}px)`;
+    }
+
+    prevBtn2.addEventListener('click', () => {
+        currentIndex2 = (currentIndex2 > 0) ? currentIndex2 - 1 : customerProjectImages.length - 1;
+        updateCustomerProjectsSlider();
+    });
+
+    nextBtn2.addEventListener('click', () => {
+        currentIndex2 = (currentIndex2 + 1) % customerProjectImages.length;
+        updateCustomerProjectsSlider();
+    });
+
+    customerProjectsSlider.addEventListener('touchstart', (e) => {
+        startX2 = e.touches[0].clientX;
+    });
+
+    customerProjectsSlider.addEventListener('touchend', (e) => {
+        const endX2 = e.changedTouches[0].clientX;
+        const diff2 = startX2 - endX2;
+
+        if (diff2 > 50) {
+            currentIndex2 = (currentIndex2 + 1) % customerProjectImages.length;
+        } else if (diff2 < -50) {
+            currentIndex2 = (currentIndex2 - 1 + customerProjectImages.length) % customerProjectImages.length;
+        }
+        updateCustomerProjectsSlider();
+    });
+
+    window.addEventListener('resize', updateCustomerProjectsSlider);
+    window.addEventListener('load', updateCustomerProjectsSlider);
+
 
     // NEW script for chatbot functionality
     const chatbotIcon = document.getElementById('chatbotIcon');
