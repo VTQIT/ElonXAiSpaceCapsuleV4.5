@@ -8,32 +8,118 @@ body {
     /* Removed the body background color as the video will be the main background */
 }
 
+.header-container {
+    max-width: 1200px;
+    /* margin: 0 auto; Removed as header flex will manage centering */
+    padding: 20px;
+    display: flex; /* Added flex for container */
+    justify-content: space-between; /* Space between logo and nav/toggle */
+    align-items: center; /* Vertically align items */
+    width: 100%; /* Ensure container takes full width within header */
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+
+/* Language Selector */
+.language-selector {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.language-selector option {
+    color: #333;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 1rem 0;
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#mobile-menu.active {
+    display: flex;
+}
+
+#mobile-menu a {
+    color: white !important;
+    text-decoration: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#mobile-menu a:hover {
+    background-color: rgba(0, 188, 212, 0.2);
+}
+
+#mobile-menu .language-selector {
+    margin: 1rem 0;
+    width: 80%; /* Ensure it takes a reasonable width */
+    max-width: 200px; /* Add a max-width for better appearance on larger mobile screens */
+    color: #333; /* Make text visible against dark background */
+    background-color: #f9f9f9; /* Lighter background for visibility */
+    border: 1px solid #ddd; /* Add a slight border */
+}
+
 /* Header Section - Made transparent dark gray */
 header {
-    position: relative; /* Ensure header is above other content */
-    background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray for header */
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.8);
     color: white;
-    box-shadow: none; /* Remove existing shadow as it might clash */
-    z-index: 10; /* Give a higher z-index to ensure it's always on top */
+    box-shadow: none;
+    z-index: 10;
+    display: flex; /* Added flexbox to header */
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Vertically center the container */
+    padding: 10px 20px; /* Add some padding to the header */
+}
+
+header nav {
+    display: flex; /* Ensure nav items are also flex for proper spacing */
+    gap: 20px; /* Space between nav links */
+    align-items: center;
 }
 
 header nav a {
-    color: white !important; /* Ensure nav links are white */
+    color: white !important;
 }
 
 /* Mobile Menu - also made transparent dark gray */
 #mobile-menu {
-    background-color: rgba(30, 30, 30, 0.9) !important; /* Slightly more opaque for mobile menu */
+    background-color: rgba(30, 30, 30, 0.9) !important;
 }
 
 #mobile-menu a {
-    color: white !important; /* Ensure mobile menu links are white */
+    color: white !important;
 }
 
 
@@ -41,12 +127,11 @@ header nav a {
 .section {
     padding: 60px 0;
     text-align: center;
-    /* Apply transparent dark gray background to all sections below the hero */
-    position: relative; /* Essential for z-index to work against the fixed video */
-    background-color: rgba(30, 30, 30, 0.8); /* Dark gray with 80% opacity */
-    color: white; /* Adjust text color for readability against dark background */
-    margin-top: 1rem; /* Add some margin between sections if desired */
-    z-index: 1; /* Ensure these sections are above the video */
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: white;
+    margin-top: 1rem;
+    z-index: 1;
 }
 
 /* Removed the alternating background color as all sections will now be dark transparent */
@@ -92,7 +177,7 @@ h1, h2, h3, h4 {
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -102,23 +187,23 @@ h1, h2, h3, h4 {
 }
 
 #background-video {
-    position: fixed; /* Change to fixed to cover the entire page */
+    position: fixed;
     top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100; /* Puts the video behind all other content */
+    z-index: -100;
     transform: translate(-50%, -50%);
     background-size: cover;
-    filter: brightness(60%); /* Darken video for better text readability */
+    filter: brightness(60%);
 }
 
 .hero-content {
     z-index: 1;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for text */
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }
 
@@ -134,7 +219,7 @@ h1, h2, h3, h4 {
 }
 
 .marketing-intro {
-    background-color: rgba(30, 30, 30, 0.8); /* Transparent dark gray */
+    background-color: rgba(30, 30, 30, 0.8);
     padding: 30px;
     margin-bottom: 40px;
     border-radius: 8px;
@@ -151,8 +236,8 @@ h1, h2, h3, h4 {
 }
 
 .marketing-content {
-    position: relative; /* Needed for overlay effect */
-    padding-bottom: 40px; /* Space for the button */
+    position: relative;
+    padding-bottom: 40px;
 }
 
 .marketing-content p {
@@ -161,14 +246,14 @@ h1, h2, h3, h4 {
 
 /* See More / Less Functionality */
 .marketing-content .more-content {
-    max-height: 0; /* Initially hidden */
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
     opacity: 0;
 }
 
 .marketing-content.expanded .more-content {
-    max-height: 500px; /* Adjust based on content height */
+    max-height: 500px;
     opacity: 1;
 }
 
@@ -180,7 +265,7 @@ h1, h2, h3, h4 {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    margin-top: 15px; /* Space above button */
+    margin-top: 15px;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -224,6 +309,7 @@ h1, h2, h3, h4 {
     margin-top: 0;
     color: white; /* Ensure headings are visible against the dark card background */
 }
+
 
 /* Gallery Slider Section Styles */
 .gallery-container {
@@ -323,13 +409,13 @@ h1, h2, h3, h4 {
 }
 
 .team-member-card {
-    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter dark for cards */
+    background-color: rgba(50, 50, 50, 0.9);
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    color: white; /* Ensure card text is white */
+    color: white;
 }
 
 .team-member-card:hover {
@@ -351,27 +437,27 @@ h1, h2, h3, h4 {
 .team-member-card h3 {
     margin-top: 0;
     margin-bottom: 5px;
-    color: white; /* Ensure headings are visible against the dark card background */
+    color: white;
 }
 
 .team-member-card p {
     font-size: 0.95em;
-    color: #f0f0f0; /* Slightly lighter text for readability */
+    color: #f0f0f0;
 }
 
 /* Footer */
 .footer {
-    position: relative; /* Ensure footer is above the video */
-    background-color: rgba(30, 30, 30, 0.9); /* Darker and more opaque for the footer */
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.9);
     color: white;
     padding: 20px 0;
     text-align: center;
     font-size: 0.9em;
-    z-index: 1; /* Ensure footer is above the video */
+    z-index: 1;
 }
 
 .footer .social-links a {
-    color: #a0a0a0; /* Lighter links in the footer */
+    color: #a0a0a0;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -391,7 +477,7 @@ h1, h2, h3, h4 {
     }
 
     .house-model-grid, .team-grid {
-        grid-template-columns: 1fr; /* Stack columns on small screens */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -400,7 +486,7 @@ h1, h2, h3, h4 {
 .video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* For 16:9 Aspect Ratio (height / width * 100%) */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     margin: 0 auto;
@@ -411,13 +497,13 @@ h1, h2, h3, h4 {
 }
 
 /* New rule for the iframe inside video-wrapper */
-.video-wrapper iframe { /* Target the iframe specifically */
+.video-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0; /* Ensures no default iframe border */
+    border: 0;
 }
 
 /* Responsive adjustments for smaller screens - No change needed */
@@ -433,33 +519,29 @@ h1, h2, h3, h4 {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .video-presentation-section {
-        padding: 0; /* Ensure no padding on smaller screens as well */
+        padding: 0;
     }
     .video-wrapper {
-        padding-bottom: 56.25%; /* Maintain aspect ratio */
+        padding-bottom: 56.25%;
     }
 }
 
 /* Floating Chatbot Icon - MODIFIED FOR MOUSE INTERACTION */
 .chatbot-icon {
-    position: absolute; /* Changed from 'fixed' to 'absolute' */
-    /* Remove bottom and right, as JS will control position */
-    /* bottom: 20px; */
-    /* right: 20px; */
+    position: absolute;
     z-index: 1000;
-    cursor: grab; /* Cursor changes to indicate it's draggable */
-    transition: transform 0.1s ease-out; /* Smoother, faster transition for mouse tracking */
-    /* Remove existing animation */
+    cursor: grab;
+    transition: transform 0.1s ease-out;
     animation: none;
     transform-origin: center center;
-    top: 50%; /* Initial position, will be overridden by JS */
-    left: 50%; /* Initial position, will be overridden by JS */
-    transform: translate(-50%, -50%); /* Center the icon initially */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .chatbot-icon img {
-    width: 80px;     /* Changed from 70px to 80px */
-    height: 80px;    /* Changed from 70px to 80px */
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 3px solid #007bff;
@@ -475,32 +557,32 @@ h1, h2, h3, h4 {
     .chatbot-icon {
         /* On mobile, we might want to disable mouse tracking or use touch events */
         /* For now, we'll keep it absolute, but touch events would be ideal */
-        animation: none; /* Ensure no animation on mobile for mouse tracking */
+        animation: none;
     }
     .chatbot-icon img {
-        width: 70px; /* Changed from 60px to 70px */
-        height: 70px; /* Changed from 60px to 70px */
+        width: 70px;
+        height: 70px;
     }
 }
 
 /* Chatbot Window Styling */
 .chatbot-window {
     position: fixed;
-    bottom: 90px; /* Position above the chatbot icon */
+    bottom: 90px;
     right: 20px;
-    width: 320px; /* Standard width for a chat window */
-    height: 400px; /* Standard height */
+    width: 320px;
+    height: 400px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    z-index: 999; /* Slightly lower than icon, but still on top */
-    transform: translateY(20px) scale(0.95); /* Initial hidden state */
+    z-index: 999;
+    transform: translateY(20px) scale(0.95);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease-in-out; /* Smooth transition for show/hide */
+    transition: all 0.3s ease-in-out;
 }
 
 .chatbot-window.active {
@@ -544,7 +626,7 @@ h1, h2, h3, h4 {
 .chatbot-body {
     flex-grow: 1;
     padding: 15px;
-    overflow-y: auto; /* Enable scrolling for content */
+    overflow-y: auto;
     background-color: #f9f9f9;
 }
 
@@ -558,9 +640,9 @@ h1, h2, h3, h4 {
 }
 
 .bot-message {
-    background-color: #e2f0ff; /* Light blue for bot messages */
+    background-color: #e2f0ff;
     color: #333;
-    align-self: flex-start; /* Align to the left */
+    align-self: flex-start;
     border-bottom-left-radius: 2px;
 }
 
@@ -569,7 +651,7 @@ h1, h2, h3, h4 {
     width: 100%;
     padding: 10px 15px;
     margin-bottom: 8px;
-    background-color: #e9ecef; /* Light gray button */
+    background-color: #e9ecef;
     border: 1px solid #dee2e6;
     border-radius: 8px;
     text-align: left;
@@ -586,12 +668,12 @@ h1, h2, h3, h4 {
 .answer-display {
     margin-top: 20px;
     padding: 15px;
-    background-color: #f0f0f0; /* Slightly darker background for answers */
+    background-color: #f0f0f0;
     border-left: 4px solid #007bff;
     border-radius: 5px;
     font-size: 0.9em;
     color: #555;
-    white-space: pre-wrap; /* Preserve formatting for answers */
+    white-space: pre-wrap;
 }
 
 .answer-display h4 {
@@ -614,21 +696,34 @@ h1, h2, h3, h4 {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .chatbot-window {
-        bottom: 70px; /* Adjust position for smaller icon */
+        bottom: 70px;
         right: 15px;
-        width: 90%; /* Take up more width on small screens */
-        max-width: 300px; /* Max width to prevent it from being too big */
+        width: 90%;
+        max-width: 300px;
         height: 350px;
+    }
+
+    header .container {
+        flex-direction: row; /* Keep elements in a row */
+        justify-content: space-between; /* Space out logo and nav */
+    }
+
+    header nav {
+        display: none; /* Hide main nav on mobile */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Show mobile toggle on smaller screens */
     }
 }
 
-.gallery-container {
-    position: relative;
-    width: 100%; /* Make container take full width of its parent */
-    max-width: 900px; /* Still allow a max-width for larger screens */
-    margin: 40px auto; /* Center the container */
-    overflow: hidden; /* Important for hiding images outside current view */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    background-color: rgba(50, 50, 50, 0.7); /* This is already set to transparent gray! */
+/* Specific styling for navigation on larger screens */
+@media (min-width: 769px) {
+    header nav {
+        display: flex; /* Ensure nav is visible on larger screens */
+    }
+
+    .mobile-menu-toggle {
+        display: none; /* Hide mobile toggle on larger screens */
+    }
 }
