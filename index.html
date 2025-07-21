@@ -5,7 +5,705 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Space Capsule House</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="ht<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Space Capsule House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://t.co/Sj2AkLFbpB">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Chatbot Language Selector */
+        .chatbot-language-selector {
+            font-size: 0.9rem; /* Match chatbot text size */
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .chatbot-language-selector option {
+            background-color: #374151; /* Tailwind's gray-700 */
+            color: white;
+        }
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .chatbot-language-selector {
+                font-size: 0.85rem; /* Smaller font on mobile */
+                padding: 0.5rem; /* Adjust padding */
+                margin: 0.5rem 0.75rem; /* Adjust margins */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#" class="rounded-md p-2 hover:bg-white transition-colors duration-300">
+            <img src="images/logo.png" alt="YourSite Logo" class="h-10 md:h-12 w-auto rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/150x50/cccccc/333333?text=Logo+Error';">
+        </a>
+        
+        <ul class="hidden md:flex space-x-6 text-lg">
+            <li><a href="#home" class="hover:text-gray-300 transition-colors duration-300">Home</a></li>
+            <li><a href="#about" class="hover:text-gray-300 transition-colors duration-300">About</a></li>
+            <li><a href="#house-models" class="hover:text-gray-300 transition-colors duration-300">Models</a></li>
+            <li><a href="#gallery" class="hover:text-gray-300 transition-colors duration-300">Gallery</a></li>
+            <li><a href="#contact" class="hover:text-gray-300 transition-colors duration-300">Contact</a></li>
+            <li><a href="#team" class="hover:text-gray-300 transition-colors duration-300">Team</a></li>
+        </ul>
+
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white focus:outline-none focus:text-gray-300">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden bg-gray-800 bg-opacity-90 text-white text-center py-4">
+        <ul class="flex flex-col space-y-4">
+            <li><a href="#home" class="block hover:bg-gray-700 py-2 px-4 rounded">Home</a></li>
+            <li><a href="#about" class="block hover:bg-gray-700 py-2 px-4 rounded">About</a></li>
+            <li><a href="#house-models" class="block hover:bg-gray-700 py-2 px-4 rounded">Models</a></li>
+            <li><a href="#gallery" class="block hover:bg-gray-700 py-2 px-4 rounded">Gallery</a></li>
+            <li><a href="#contact" class="block hover:bg-gray-700 py-2 px-4 rounded">Contact</a></li>
+            <li><a href="#team" class="block hover:bg-gray-700 py-2 px-4 rounded">Team</a></li>
+        </ul>
+    </div>
+</header>
+
+    <section class="hero-section" id="home">
+        <video autoplay muted loop id="background-video">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>ELON³ X</h1>
+            <p>Etherneom Livingspace in an Open Nested Neomlinked Network Xperiment</p> 
+        </div>
+    </section>
+	    <section class="section video-presentation-section">
+       <div class="container">
+        <h2>Our Space Capsule System Control OS</h2>
+        <div class="video-wrapper">
+            <iframe 
+                title="ElonX Space Capsule House Presentation"
+                src="https://www.youtube.com/embed/0DNPNk9mLaY?autoplay=1&mute=1" 
+                frameborder="0" 
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+    <section class="video-presentation-section">
+        <div class="container">
+            <h2 class="text-3xl font-bold text-center mb-10 text-white"></h2>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/5zigCZWH-v0?autoplay=1&mute=1&loop=1&playlist=5zigCZWH-v0&controls=1&showinfo=0&modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section class="marketing-intro">
+        <h2>Experience Tomorrow, Today.</h2>
+        <div class="marketing-content">
+            <p>Imagine a home that transcends the ordinary. Inspired by the ingenuity of space exploration, the ElonX Space Capsule House redefines modern living with unparalleled efficiency, sustainable technology, and a connection to the cosmos. Live smart, live boldly.</p>
+            <div class="more-content" id="moreMarketingContent">
+                <p>Every ElonX Capsule House is a testament to cutting-edge design, featuring self-sustaining energy systems, advanced environmental controls, and a modular layout that adapts to your evolving needs. It's not just a house; it's a launchpad for your dreams, designed for a future where innovation and sustainability coexist seamlessly. Welcome to the frontier of habitation.</p>
+                <p>"The future needs to be exciting. We need to wake up and be excited about the future." - Elon Musk (paraphrased)</p>
+            </div>
+            <button class="see-more-btn" id="toggleMarketingBtn">See More</button>
+        </div>
+    </section>
+    <section id="customer-projects" class="py-16 bg-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800"></h2>
+            <div class="gallery-container relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl">
+                <div class="gallery-slider flex transition-transform duration-500 ease-in-out" id="customer-projects-slider">
+                    <img src="images/photoA1.png" alt="Customer Project 1" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/photoA2.png" alt="Customer Project 2" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/photoA3.png" alt="Customer Project 3" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/photoA4.png" alt="Customer Project 4" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/photoA5.png" alt="Customer Project 5" class="w-full h-auto object-cover flex-shrink-0">
+                </div>
+                <button id="prev-btn-2" class="gallery-control-btn absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn-2" class="gallery-control-btn absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="house-models" class="section">
+        <div class="container">
+            <h2>Our House Models</h2>
+            <div class="house-model-grid">
+                <div class="house-model-card">
+                    <img src="images/capsule 1.jpg" alt="Space Capsule Model 1">  
+                    <h3>GOAi - Colony Capsule</h3>
+                    <h3>(ELONX 27B)</h3>
+                    <p>
+                        <li>labatory</li>
+                        <li>shower</li>
+                        <li>smart toilet (regular)</li>
+                        <li>smart mirror (regular)</li>
+                    </p>
+                    <a href="#" class="btn-small">View Details</a>
+                </div>
+                <div class="house-model-card">
+                    <img src="images/capsule 2.jpg" alt="Space Capsule Model 2">
+                    <h3>VTQ - Quest Capsule</h3>
+                    <h3>(ELONX 27D)</h3> 
+                    <p>
+                        <li>Split Type Aircon & Water Heater</li>
+                        <li>Smart Bed</li>
+                        <li>Smart Curtain</li>
+                        <li>Smart TV</li>
+                        <li>Smart Bed</li>
+                        <li>5KW Solar & Battery</li>
+                    </p>
+                    <a href="#" class="btn-small">View Details</a>
+                </div>
+                <div class="house-model-card">
+                    <img src="images/capsule 3.jpg" alt="Space Capsule Model 3">
+                    <h3>AVAA - Resorts Capsule</h3>
+                    <h3>(ELONX 27S)</h3>
+                    <p>
+                        <li>Split Type Aircon & Water Heater</li>
+                        <li>Smart Bed</li>
+                        <li>Smart Curtain</li>
+                        <li>Smart TV</li>
+                        <li>Smart Bed</li>
+                        <li>5KW Solar & Battery</li>
+                    </p>
+                    <a href="#" class="btn-small">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="py-16 bg-gray">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10 text-white-800">Our Space Capsule System Control OS</h2>
+            <div class="gallery-container relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-xl">
+                <div class="gallery-slider flex transition-transform duration-500 ease-in-out" id="gallery-slider">
+                    <img src="images/gallery1.png" alt="Space Capsule 1" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery2.png" alt="Space Capsule 2" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery3.png" alt="Space Capsule 3" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery4.png" alt="Space Capsule 4" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery5.png" alt="Space Capsule 5" class="w-full h-auto object-cover flex-shrink-0">
+                    <img src="images/gallery6.png" alt="Space Capsule 6" class="w-full h-auto object-cover flex-shrink-0">
+                </div>
+                <button id="prev-btn" class="gallery-control-btn absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn" class="gallery-control-btn absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Ready to explore the future of living? Connect with us to learn more about the ElonX Space Capsule House or schedule a virtual tour!</p>
+        <div class="contact-grid">
+            <div class="contact-form">
+                <form action="/submit" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <select name="inquiry_type" required>
+                        <option value="" disabled selected>Select Inquiry Type</option>
+                        <option value="demo">Schedule a Virtual Tour</option>
+                        <option value="pricing">Request Pricing Details</option>
+                        <option value="customization">Explore Customization Options</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Launch Your Inquiry</button>
+                </form>
+                <div class="trust-signals">
+                    <p><strong>Trusted by innovators worldwide</strong></p>
+                    <p>Join 500+ customers living the future with ElonX</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Our Mission Control</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Starbase Texas 78521 USA</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+63-991-3026370</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>elonxaispacecapsule@gmail.com</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.463563345678!2d-97.173456!3d25.997245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f9b9f6b5c7b1d%3A0x4e7a8f7c8d9e0b2!2sStarbase%2C%20Texas%2078521%2C%20USA!5e0!3m2!1sen!2sus!4v1697041234567" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                    <div class="mt-8 md:mt-0 w-full h-64 bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14345.073354287539!2d-97.19331973650584!3d25.99202582276189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866fb1632384e2d5%3A0xa8d0c7f6e909dc99!2sStarbase%2C%20TX%2078521%2C%20USA!5e0!3m2!1sen!2sph!4v1752221120286!5m2!1sen!2sph"
+                            width="100%"
+                            height="100%"
+                            style="border:0;" 
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="section">
+        <div class="container">
+            <h2>Meet Our Visionaries</h2>
+            <div class="team-grid">
+                <div class="team-member-card">
+                    <img src="images/Managment 007.jpg" alt="Team Member 2">
+                    <h3>Don Jose Luga Guardo Jr.</h3>
+                    <p>Chief Innovation Architect</p>
+                    <p>StarGate, Boca Chica, Texas USA</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 006.jpg" alt="Team Member 2">
+                    <h3>Jacob Naimi</h3>
+                    <p>CEO for One EARTH and ETHERNEOM DC³</p>
+                    <p>Tel Aviv, Israel</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 004.jpg" alt="Team Member 4">
+                    <h4>Darwin Bartolome</h4>
+                    <p>CEO ELONX Philippines</p>
+                    <p>Asiana City, Metro Manila, Philippines</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 003.jpg" alt="Team Member 1">
+                    <h3>Annie Misenas</h3>
+                    <p>COO ElonX Philippines</p>
+                    <p>Asiana City, Metro Manila, Philippines</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 001.jpg" alt="Team Member 2">
+                    <h3>Lino Laforga Rosete Ph.D</h3>
+                    <p>Chief Technology Officer CTO</p>
+                    <p>(Dubai, Kuwait India)</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 005.jpg" alt="Team Member 4">
+                    <h3>Archt Jimmy Chan</h3>
+                    <p>Chief Design Architect Design HQ</p>
+                    <p>Shenzhen, Guangdong China</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 002.jpg" alt="Team Member 3">
+                    <h3 class="font-bold">Yolanda He</h3>
+                    <p>COO ElonX Foshan Production Line</p>
+                    <p>Foshan, Guangdong China</p>
+                </div>
+                <div class="team-member-card">
+                    <img src="images/Managment 008.jpg" alt="Team Member 3">
+                    <h3 class="font-bold">Lucas Xu</h3>
+                    <p>Chief Operations Officer COO</p>
+                    <p>OrangeWare Ai USA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="flex justify-center space-x-4 mt-6 w-full">
+            <a href="https://www.facebook.com/orangeware.don" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-3xl">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://x.com/ElonX_Ai" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300">
+                <img src="image_b0ea1a.png" alt="X logo" class="h-8 w-8 object-contain">
+            </a>
+            <a href="https://www.instagram.com/elonx.25/" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-3xl">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.instagram.com/elonx.25/" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-3xl">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/watch?v=ZuIyb_5Y7B4" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-3xl">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
+    <div class="chatbot-icon" id="chatbotIcon">
+        <img src="chatbot.png" alt="Chatbot Icon">
+    </div>
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3>How can I help you?</h3>
+            <button class="close-btn" id="closeChatbotBtn">×</button>
+        </div>
+        <select class="chatbot-language-selector w-full mx-4 my-2 p-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="zh">中文</option>
+        </select>
+        <div class="chatbot-body" id="chatbotBody">
+            <p class="chatbot-message bot-message">Hello! I'm your virtual Chatbot Ai. Please choose a question below:</p>
+            <div class="question-list" id="questionList">
+            </div>
+            <div class="answer-display" id="answerDisplay">
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <p>Powered by ElonX Ai</p>
+        </div>
+    </div>
+    <script>
+	
+        // Translation object for chatbot content
+        const translations = {
+            en: {
+                header: "How can I help you?",
+                greeting: "Hello! I'm your virtual Chatbot Ai. Please choose a question below:",
+                questions: [
+                    "What products do you offer?",
+                    "How long does installation take?",
+                    "What are the payment options?",
+                    "Do you provide customization options?",
+                    "What is your warranty policy?"
+                ],
+                answers: [
+                    "We offer a range of products including Space Capsule Houses, modular living units, and custom-designed compact homes. Each product is designed for efficiency and modern living.",
+                    "Standard installation for our Space Capsule House typically takes 2-3 days, assuming the site is prepared. Larger custom projects may take longer. Our team handles the setup process efficiently.",
+                    "We accept various payment methods including bank transfers, major credit cards, and financing options through our partners. A 30% down payment is required to confirm your order.",
+                    "Yes, we offer extensive customization options for interior layouts, finishes, and smart home integrations to ensure your space perfectly matches your needs and style.",
+                    "All our Space Capsule Houses come with a 5-year structural warranty and a 1-year warranty on all appliances and fixtures. Extended warranty options are also available."
+                ]
+            },
+            es: {
+                header: "¿Cómo puedo ayudarte?",
+                greeting: "¡Hola! Soy tu Chatbot Ai virtual. Por favor, elige una pregunta a continuación:",
+                questions: [
+                    "¿Qué productos ofrecen?",
+                    "¿Cuánto tiempo lleva la instalación?",
+                    "¿Cuáles son las opciones de pago?",
+                    "¿Ofrecen opciones de personalización?",
+                    "¿Cuál es su política de garantía?"
+                ],
+                answers: [
+                    "Ofrecemos una gama de productos que incluye Casas Cápsula Espacial, unidades de vivienda modulares y hogares compactos diseñados a medida. Cada producto está diseñado para la eficiencia y la vida moderna.",
+                    "La instalación estándar para nuestra Casa Cápsula Espacial generalmente toma de 2 a 3 días, asumiendo que el sitio está preparado. Los proyectos personalizados más grandes pueden tomar más tiempo. Nuestro equipo maneja el proceso de configuración de manera eficiente.",
+                    "Aceptamos varios métodos de pago, incluyendo transferencias bancarias, tarjetas de crédito principales y opciones de financiamiento a través de nuestros socios. Se requiere un pago inicial del 30% para confirmar tu pedido.",
+                    "Sí, ofrecemos amplias opciones de personalización para diseños interiores, acabados e integraciones de hogar inteligente para asegurar que tu espacio se adapte perfectamente a tus necesidades y estilo.",
+                    "Todas nuestras Casas Cápsula Espacial vienen con una garantía estructural de 5 años y una garantía de 1 año en todos los electrodomésticos y accesorios. También hay opciones de garantía extendida disponibles."
+                ]
+            },
+            zh: {
+                header: "我能帮你什么？",
+                greeting: "你好！我是你的虚拟聊天机器人。请在下面选择一个问题：",
+                questions: [
+                    "你们提供什么产品？",
+                    "安装需要多长时间？",
+                    "有哪些支付选项？",
+                    "你们提供定制选项吗？",
+                    "你们的保修政策是什么？"
+                ],
+                answers: [
+                    "我们提供一系列产品，包括太空舱屋、模块化居住单元和定制设计的紧凑型住宅。每个产品都设计为高效和现代生活。",
+                    "我们的太空舱屋标准安装通常需要2-3天，假设现场已准备好。较大的定制项目可能需要更长时间。我们的团队高效地处理安装过程。",
+                    "我们接受多种支付方式，包括银行转账、主要信用卡和通过我们合作伙伴提供的融资选项。确认订单需要30%的首付款。",
+                    "是的，我们提供广泛的定制选项，包括内部布局、装饰和智能家居集成，以确保您的空间完全符合您的需求和风格。",
+                    "我们所有的太空舱屋均享有5年结构保修和所有电器及固定装置的1年保修。还提供延长保修选项。"
+                ]
+            }
+        };
+
+        // Function to update chatbot content based on selected language
+        function updateChatbotLanguage(language) {
+            const chatbotHeader = document.querySelector('.chatbot-header h3');
+            const chatbotGreeting = document.querySelector('.chatbot-message.bot-message');
+            const questionList = document.getElementById('questionList');
+            const answerDisplay = document.getElementById('answerDisplay');
+
+            // Update header and greeting
+            chatbotHeader.textContent = translations[language].header;
+            chatbotGreeting.textContent = translations[language].greeting;
+
+            // Update FAQ data with translated questions and answers
+            faqData.forEach((item, index) => {
+                item.question = translations[language].questions[index];
+                item.answer = translations[language].answers[index];
+            });
+
+            // Repopulate questions to reflect the new language
+            populateQuestions();
+
+            // If an answer is displayed, update it
+            if (answerDisplay.style.display === 'block') {
+                const currentIndex = parseInt(answerDisplay.querySelector('button')?.dataset?.index || 0);
+                displayAnswer(currentIndex);
+            }
+        }
+
+        // Gallery Slider
+        const gallerySlider = document.getElementById('gallery-slider');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const images = gallerySlider.querySelectorAll('img');
+
+        let currentIndex = 0;
+        let startX = 0;
+
+        function updateSlider() {
+            const sliderWidth = gallerySlider.clientWidth;
+            gallerySlider.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateSlider();
+        });
+
+        gallerySlider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        gallerySlider.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (diff > 50) {
+                currentIndex = (currentIndex + 1) % images.length;
+            } else if (diff < -50) {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+            }
+            updateSlider();
+        });
+
+        window.addEventListener('resize', updateSlider);
+        window.addEventListener('load', updateSlider);
+
+        // Customer Projects Slider
+        const customerProjectsSlider = document.getElementById('customer-projects-slider');
+        const prevBtn2 = document.getElementById('prev-btn-2');
+        const nextBtn2 = document.getElementById('next-btn-2');
+        const customerProjectImages = customerProjectsSlider.querySelectorAll('img');
+
+        let currentIndex2 = 0;
+        let startX2 = 0;
+
+        function updateCustomerProjectsSlider() {
+            const sliderWidth2 = customerProjectsSlider.clientWidth;
+            customerProjectsSlider.style.transform = `translateX(-${currentIndex2 * sliderWidth2}px)`;
+        }
+
+        prevBtn2.addEventListener('click', () => {
+            currentIndex2 = (currentIndex2 > 0) ? currentIndex2 - 1 : customerProjectImages.length - 1;
+            updateCustomerProjectsSlider();
+        });
+
+        nextBtn2.addEventListener('click', () => {
+            currentIndex2 = (currentIndex2 + 1) % customerProjectImages.length;
+            updateCustomerProjectsSlider();
+        });
+
+        customerProjectsSlider.addEventListener('touchstart', (e) => {
+            startX2 = e.touches[0].clientX;
+        });
+
+        customerProjectsSlider.addEventListener('touchend', (e) => {
+            const endX2 = e.changedTouches[0].clientX;
+            const diff2 = startX2 - endX2;
+
+            if (diff2 > 50) {
+                currentIndex2 = (currentIndex2 + 1) % customerProjectImages.length;
+            } else if (diff2 < -50) {
+                currentIndex2 = (currentIndex2 - 1 + customerProjectImages.length) % customerProjectImages.length;
+            }
+            updateCustomerProjectsSlider();
+        });
+
+        window.addEventListener('resize', updateCustomerProjectsSlider);
+        window.addEventListener('load', updateCustomerProjectsSlider);
+
+        // Chatbot Functionality
+        const chatbotIcon = document.getElementById('chatbotIcon');
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        const closeChatbotBtn = document.getElementById('closeChatbotBtn');
+        const questionList = document.getElementById('questionList');
+        const answerDisplay = document.getElementById('answerDisplay');
+        const chatbotLanguageSelector = document.querySelector('.chatbot-language-selector');
+
+        // Define FAQ data
+        const faqData = [
+            {
+                question: translations.en.questions[0],
+                answer: translations.en.answers[0]
+            },
+            {
+                question: translations.en.questions[1],
+                answer: translations.en.answers[1]
+            },
+            {
+                question: translations.en.questions[2],
+                answer: translations.en.answers[2]
+            },
+            {
+                question: translations.en.questions[3],
+                answer: translations.en.answers[3]
+            },
+            {
+                question: translations.en.questions[4],
+                answer: translations.en.answers[4]
+            }
+        ];
+
+        // Function to populate questions
+        function populateQuestions() {
+            questionList.innerHTML = ''; // Clear previous questions
+            answerDisplay.innerHTML = ''; // Clear previous answers
+            faqData.forEach((item, index) => {
+                const button = document.createElement('button');
+                button.textContent = item.question;
+                button.dataset.index = index;
+                button.className = 'block w-full text-left p-3 mb-2 rounded-md bg-gray-200 hover:bg-gray-300 border border-gray-300 transition-colors duration-200';
+                button.addEventListener('click', () => displayAnswer(index));
+                questionList.appendChild(button);
+            });
+            questionList.style.display = 'block';
+            answerDisplay.style.display = 'none';
+        }
+
+        // Function to display answer
+        function displayAnswer(index) {
+            const selectedFaq = faqData[index];
+            if (selectedFaq) {
+                answerDisplay.innerHTML = `
+                    <h4>${selectedFaq.question}</h4>
+                    <p>${selectedFaq.answer}</p>
+                    <button class="back-to-questions-btn block w-full text-left p-3 mt-2 rounded-md bg-gray-200 hover:bg-gray-300 border border-gray-300 transition-colors duration-200" data-index="${index}">← Back to Questions</button>
+                `;
+                questionList.style.display = 'none';
+                answerDisplay.style.display = 'block';
+
+                const backButton = answerDisplay.querySelector('.back-to-questions-btn');
+                if (backButton) {
+                    backButton.addEventListener('click', populateQuestions);
+                }
+            }
+        }
+
+        // Language selector event listener
+        if (chatbotLanguageSelector) {
+            chatbotLanguageSelector.addEventListener('change', (e) => {
+                const selectedLanguage = e.target.value;
+                updateChatbotLanguage(selectedLanguage);
+            });
+        }
+
+        // Toggle chatbot window
+        if (chatbotIcon) {
+            chatbotIcon.addEventListener('click', () => {
+                chatbotWindow.classList.toggle('active');
+                if (chatbotWindow.classList.contains('active')) {
+                    populateQuestions();
+                }
+            });
+        }
+
+        if (closeChatbotBtn) {
+            closeChatbotBtn.addEventListener('click', () => {
+                chatbotWindow.classList.remove('active');
+            });
+        }
+
+        // Mouse-controlled chatbot movement
+        let mouseX = 0;
+        let mouseY = 0;
+        let iconX = window.innerWidth / 2;
+        let iconY = window.innerHeight / 2;
+        const speed = 0.05;
+
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+
+        if (!isTouchDevice) {
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateChatbot() {
+                if (!chatbotWindow.classList.contains('active')) {
+                    const dx = mouseX - (iconX + chatbotIcon.clientWidth / 2);
+                    const dy = mouseY - (iconY + chatbotIcon.clientHeight / 2);
+
+                    iconX += dx * speed;
+                    iconY += dy * speed;
+
+                    chatbotIcon.style.left = `${iconX}px`;
+                    chatbotIcon.style.top = `${iconY}px`;
+                }
+                requestAnimationFrame(animateChatbot);
+            }
+
+            window.addEventListener('load', () => {
+                iconX = window.innerWidth / 2 - chatbotIcon.clientWidth / 2;
+                iconY = window.innerHeight / 2 - chatbotIcon.clientHeight / 2;
+                chatbotIcon.style.left = `${iconX}px`;
+                chatbotIcon.style.top = `${iconY}px`;
+                animateChatbot();
+                updateChatbotLanguage('en'); // Set default language
+            });
+
+            window.addEventListener('resize', () => {
+                if (!chatbotWindow.classList.contains('active')) {
+                    iconX = window.innerWidth / 2 - chatbotIcon.clientWidth / 2;
+                    iconY = window.innerHeight / 2 - chatbotIcon.clientHeight / 2;
+                    chatbotIcon.style.left = `${iconX}px`;
+                    chatbotIcon.style.top = `${iconY}px`;
+                }
+            });
+        } else {
+            chatbotIcon.style.position = 'fixed';
+            chatbotIcon.style.bottom = '20px';
+            chatbotIcon.style.right = '20px';
+            chatbotIcon.style.top = 'auto';
+            chatbotIcon.style.left = 'auto';
+            chatbotIcon.style.transform = 'none';
+            chatbotIcon.style.cursor = 'pointer';
+            window.addEventListener('load', () => {
+                updateChatbotLanguage('en'); // Set default language
+            });
+        }
+    </script>
+</body>
+</html>tps://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://t.co/Sj2AkLFbpB">
