@@ -20,42 +20,40 @@
 <body>
 
     <header>
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#" class="rounded-md p-2 hover:bg-white transition-colors duration-300">
-            <img src="images/logo.png" alt="YourSite Logo" class="h-10 md:h-12 w-auto rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/150x50/cccccc/333333?text=Logo+Error';">
-        </a>
-        
-        <ul class="hidden md:flex space-x-6 text-lg">
-            <li><a href="#home" class="hover:text-gray-300 transition-colors duration-300">Home</a></li>
-            <li><a href="#about" class="hover:text-gray-300 transition-colors duration-300">About</a></li>
-            <li><a href="#house-models" class="hover:text-gray-300 transition-colors duration-300">Models</a></li>
-            <li><a href="#gallery" class="hover:text-gray-300 transition-colors duration-300">Gallery</a></li>
-            <li><a href="#contact" class="hover:text-gray-300 transition-colors duration-300">Contact</a></li>
-            <li><a href="#team" class="hover:text-gray-300 transition-colors duration-300">Team</a></li>
-        </ul>
-
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-white focus:outline-none focus:text-gray-300">
-                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
-                </svg>
-            </button>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="ELON³ X Logo" style="height: 50px;">
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#models">Models</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="#team">Team</a>
+                <select class="language-selector">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="zh">中文</option>
+                </select>
+            </nav>
+            <div class="mobile-menu-toggle">☰</div>
+            <nav id="mobile-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#models">Models</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="#team">Team</a>
+                <select class="language-selector">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="zh">中文</option>
+                </select>
+            </nav>
         </div>
-    </nav>
-
-    <div id="mobile-menu" class="md:hidden hidden bg-gray-800 bg-opacity-90 text-white text-center py-4">
-        <ul class="flex flex-col space-y-4">
-            <li><a href="#home" class="block hover:bg-gray-700 py-2 px-4 rounded">Home</a></li>
-            <li><a href="#about" class="block hover:bg-gray-700 py-2 px-4 rounded">About</a></li>
-            <li><a href="#house-models" class="block hover:bg-gray-700 py-2 px-4 rounded">Models</a></li>
-            <li><a href="#gallery" class="block hover:bg-gray-700 py-2 px-4 rounded">Gallery</a></li>
-            <li><a href="#contact" class="block hover:bg-gray-700 py-2 px-4 rounded">Contact</a></li>
-            <li><a href="#team" class="block hover:bg-gray-700 py-2 px-4 rounded">Team</a></li>
-        </ul>
-    </div>
-</header>
-
-    <section class="hero-section" id="home">
+    </header>
+     <section class="hero-section" id="home">
         <video autoplay muted loop id="background-video">
             <source src="background.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -92,12 +90,12 @@
                     <p>Every ElonX Capsule House is a testament to cutting-edge design, featuring self-sustaining energy systems, advanced environmental controls, and a modular layout that adapts to your evolving needs. It's not just a house; it's a launchpad for your dreams, designed for a future where innovation and sustainability coexist seamlessly. Welcome to the frontier of habitation.</p>
                     <p>"The future needs to be exciting. We need to wake up and be excited about the future." - Elon Musk (paraphrased)</p>
           </div>
-                <button 
+                <button
 				   class="see-more-btn" id="toggleMarketingBtn">See More</button>
             </div>
 	    </div>
-	
-	
+
+
 	</section>
         <section id="customer-projects" class="py-16 bg-gray">
         <div class="container mx-auto px-4">
@@ -128,7 +126,7 @@
             <h2>Our House Models</h2>
             <div class="house-model-grid">
                 <div class="house-model-card">
-                    <img src="images/capsule 1.jpg" alt="Space Capsule Model 1">  
+                    <img src="images/capsule 1.jpg" alt="Space Capsule Model 1">
                     <h3>GOAi - Colony Capsule</h3>
 					<h3>(ELONX 27B)</h3>
                     <p>
@@ -141,7 +139,7 @@
                 <div class="house-model-card">
                     <img src="images/capsule 2.jpg" alt="Space Capsule Model 2">
                     <h3>VTQ - Quest Capsule</h3>
-					<h3>(ELONX 27D)</h3> 
+					<h3>(ELONX 27D)</h3>
                     <p>
                 <li> Split Type Aircon & Water Heater </li>
                 <li> Smart Bed </li>
@@ -191,7 +189,7 @@
         </div>
     </section>
 
-    
+
     <section id="contact" class="section">
         <div class="container">
             <h2 class="text-3xl font-bold text-center mb-10 text-white">Contact Us</h2>
@@ -223,7 +221,7 @@
                         <p class="text-white mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Starbase Texas 78521 USA</p>
                         <p class="text-white mb-2"><i class="fas fa-phone mr-2"></i> +63-991-3026370</p>
                         <p class="text-white mb-2"><i class="fas fa-envelope mr-2"></i> elonxaispacecapsule@gmail.com</p>
-                        
+
                         <div class="flex space-x-4 mt-6">
                             <a href="https://www.facebook.com/orangeware.don" target="_blank" class="text-white hover:text-blue-500 transition-colors duration-300 text-2xl">
                                 <i class="fab fa-facebook"></i>
@@ -241,7 +239,7 @@
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14345.073354287539!2d-97.19331973650584!3d25.99202582276189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866fb1632384e2d5%3A0xa8d0c7f6e909dc99!2sStarbase%2C%20TX%2078521%2C%20USA!5e0!3m2!1sen!2sph!4v1752221120286!5m2!1sen!2sph"
                             width="100%"
                             height="100%"
-                            style="border:0;" 
+                            style="border:0;"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
