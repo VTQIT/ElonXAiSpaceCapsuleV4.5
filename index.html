@@ -195,47 +195,55 @@
         </div>
     </section>
     <section id="contact" class="section">
-        <div class="container">
-            <h2 class="text-3xl font-bold text-center mb-10 text-white">Contact Us</h2>
-            <div class="max-w-4xl mx-auto bg-gray-900 bg-opacity-70 p-8 rounded-lg shadow-xl flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
-                    <p class="text-white text-center md:text-left mb-6">Have questions or want to learn more? Send us a message!</p>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-white text-sm font-medium mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-white text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="your@example.com" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-white text-sm font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="Your message..." required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </form>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Ready to explore the future of living? Connect with us to learn more about the ElonX Space Capsule House or schedule a virtual tour!</p>
+        <div class="contact-grid">
+            <div class="contact-form">
+                <form action="/submit" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <select name="inquiry_type" required>
+                        <option value="" disabled selected>Select Inquiry Type</option>
+                        <option value="demo">Schedule a Virtual Tour</option>
+                        <option value="pricing">Request Pricing Details</option>
+                        <option value="customization">Explore Customization Options</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Launch Your Inquiry</button>
+                </form>
+                <div class="trust-signals">
+                    <p><strong>Trusted by innovators worldwide</strong></p>
+                    <p>Join 500+ customers living the future with ElonX</p>
                 </div>
-                <div class="md:w-1/2 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-4">Our Location & Details</h3>
-                        <p class="text-white mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Starbase Texas 78521 USA</p>
-                        <p class="text-white mb-2"><i class="fas fa-phone mr-2"></i> +63-991-3026370</p>
-                        <p class="text-white mb-2"><i class="fas fa-envelope mr-2"></i> elonxaispacecapsule@gmail.com</p>
-                        <div class="flex space-x-4 mt-6">
-                            <a href="https://www.facebook.com/orangeware.don" target="_blank" class="text-white hover:text-blue-500 transition-colors duration-300 text-2xl">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://x.com/ElonX_Ai" target="_blank" class="text-white hover:text-gray-400 transition-colors duration-300 text-2xl">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="mailto:elonxaispacecapsule@gmail.com" class="text-white hover:text-red-500 transition-colors duration-300 text-2xl">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
+            </div>
+            <div class="contact-info">
+                <h3>Our Mission Control</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Starbase Texas 78521 USA</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+63-991-3026370</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>elonxaispacecapsule@gmail.com</span>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.463563345678!2d-97.173456!3d25.997245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f9b9f6b5c7b1d%3A0x4e7a8f7c8d9e0b2!2sStarbase%2C%20Texas%2078521%2C%20USA!5e0!3m2!1sen!2sus!4v1697041234567" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                     <div class="mt-8 md:mt-0 w-full h-64 bg-gray-800 rounded-lg overflow-hidden shadow-md">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14345.073354287539!2d-97.19331973650584!3d25.99202582276189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866fb1632384e2d5%3A0xa8d0c7f6e909dc99!2sStarbase%2C%20TX%2078521%2C%20USA!5e0!3m2!1sen!2sph!4v1752221120286!5m2!1sen!2sph"
