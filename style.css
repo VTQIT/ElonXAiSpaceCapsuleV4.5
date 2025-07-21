@@ -420,6 +420,58 @@ h1, h2, h3, h4 {
     border: 0; /* Ensures no default iframe border */
 }
 
+/* Existing .video-wrapper styles (unchanged) */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* For 16:9 Aspect Ratio (height / width * 100%) */
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background-color: transparent; /* Ensure the video wrapper is transparent */
+}
+
+/* Ensure the iframe inside video-wrapper is properly styled */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Ensures no default iframe border */
+    max-width: 100%; /* For mobile compatibility */
+    object-fit: contain; /* For proper scaling */
+}
+
+/* Override the .section background for video-presentation-section */
+.video-presentation-section {
+    background-color: transparent; /* Make the section transparent to show background video */
+}
+
+/* Existing responsive adjustments (unchanged) */
+@media (max-width: 768px) {
+    .video-presentation-section {
+        padding: 0;
+    }
+    .video-wrapper {
+        padding-bottom: 56.25%;
+    }
+}
+
+/* Existing responsive adjustments (unchanged) */
+@media (max-width: 768px) {
+    .video-presentation-section {
+        padding: 0;
+    }
+    .video-wrapper {
+        padding-bottom: 56.25%;
+    }
+}
+
 /* Responsive adjustments for smaller screens - No change needed */
 @media (max-width: 768px) {
     .video-presentation-section {
