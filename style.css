@@ -102,17 +102,15 @@ h1, h2, h3, h4 {
 }
 
 #background-video {
-    position: fixed; /* Change to fixed to cover the entire page */
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100; /* Puts the video behind all other content */
-    transform: translate(-50%, -50%);
-    background-size: cover;
-    filter: brightness(60%); /* Darken video for better text readability */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100;
+  background-size: cover;
+  filter: brightness(60%);
 }
 
 .hero-content {
@@ -806,4 +804,58 @@ h1, h2, h3, h4 {
     .map-embed iframe {
         height: 150px;
     }
+}
+
+/* Update for the logo to be fixed and optionally semi-transparent */
+.logo, #main-logo { /* Use the correct selector(s) for your logo */
+    position: fixed; /* Makes the logo stay in place relative to the viewport */
+    top: 20px; /* Adjust as needed for vertical positioning from the top */
+    left: 20px; /* Adjust as needed for horizontal positioning from the left */
+    z-index: 1001; /* Ensure it's above other elements, including the header */
+    width: 100px; /* Example size - adjust to your logo's desired size */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.9; /* Optional: Makes the logo 90% opaque (10% transparent) */
+                  /* Adjust value from 0.0 (fully transparent) to 1.0 (fully opaque) */
+}
+
+/* If you have an <img> tag directly inside your logo container, you might also want to ensure it scales correctly */
+.logo img, #main-logo img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Existing mobile adjustments */
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .house-model-grid, .team-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    /* Add or modify logo styles specifically for mobile within this media query */
+.logo, #main-logo { /* Target your logo here again */
+        position: fixed; /* Keep it fixed on mobile too */
+        top: 40px; /* Adjust vertical position for mobile */
+        left: 40px; /* Adjust horizontal position for mobile */
+        width: 90px; /* Adjust size for mobile */
+        height: auto;
+        opacity: 0.9; /* Maintain transparency on mobile */
+        z-index: 1001; /* Maintain z-index on mobile */
+    }
+
+    /* If your logo image has its own class/ID, you might target that directly */
+    .logo img, #main-logo img {
+        width: 100%; /* Ensure the image fills its container */
+        height: auto;
+    }
+
+    /* ... other mobile specific styles ... */
 }
